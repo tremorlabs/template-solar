@@ -1,9 +1,9 @@
-import { GeistSans } from "geist/font/sans";
-import type { Metadata } from "next";
-import "./globals.css";
+import { GeistSans } from "geist/font/sans"
+import type { Metadata } from "next"
+import "./globals.css"
 
-import { siteConfig } from "./siteConfig";
-
+import { NavBar } from "@/components/ui/Navbar"
+import { siteConfig } from "./siteConfig"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yoururl.com"),
@@ -39,15 +39,16 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
       <body
-        className={`${GeistSans.className} antialiased`}
+        className={`${GeistSans.className} min-h-screen scroll-auto bg-gray-50 antialiased selection:bg-orange-100 selection:text-orange-600`}
       >
+        <NavBar />
         {children}
       </body>
     </html>
-  );
+  )
 }

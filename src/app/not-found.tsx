@@ -1,17 +1,17 @@
+import { Button } from "@/components/Button"
 import Link from "next/link"
 import { siteConfig } from "./siteConfig"
-import { Button } from "@/components/Button"
-import { DatabaseLogo } from "../../public/DatabaseLogo"
-import { ArrowAnimated } from "@/components/ui/ArrowAnimated"
+
+import { RasterLogo } from "../../public/RasterLogo"
 
 export default function NotFound() {
   return (
     <div className="flex h-screen flex-col items-center justify-center">
       <Link href={siteConfig.baseLinks.home}>
-        <DatabaseLogo className="mt-6 h-10" />
+        <RasterLogo className="mt-6 h-10" />
       </Link>
-      <p className="mt-6 text-4xl font-semibold text-indigo-600 sm:text-5xl dark:text-indigo-500">
-        404
+      <p className="mt-6 text-4xl font-semibold text-amber-600 sm:text-5xl dark:text-amber-500">
+        Error 404
       </p>
       <h1 className="mt-4 text-2xl font-semibold text-gray-900 dark:text-gray-50">
         Page not found
@@ -20,13 +20,7 @@ export default function NotFound() {
         Sorry, we couldn’t find the page you’re looking for.
       </p>
       <Button asChild className="group mt-8" variant="light">
-        <Link href={siteConfig.baseLinks.home}>
-          Go to the home page
-          <ArrowAnimated
-            className="stroke-gray-900 dark:stroke-gray-50"
-            aria-hidden="true"
-          />
-        </Link>
+        <Link href={siteConfig.baseLinks.home}>Go to the home page</Link>
       </Button>
     </div>
   )
