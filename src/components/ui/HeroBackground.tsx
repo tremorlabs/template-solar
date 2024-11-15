@@ -99,7 +99,7 @@ const GameOfLife = () => {
 
   return (
     <div className="mask">
-      <canvas ref={canvasRef} width={1600} height={600} />
+      <canvas ref={canvasRef} width={1500} height={600} />
     </div>
   )
 }
