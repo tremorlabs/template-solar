@@ -1,61 +1,14 @@
 "use client"
-import { FadeContainer, FadeDiv, FadeSpan } from "@/components/Fade"
-import GameOfLife from "@/components/ui/HeroBackground"
-import { RiArrowRightUpLine, RiPlaneLine } from "@remixicon/react"
+import { Orbit } from "@/components/Orbit"
+import { Hero } from "@/components/ui/Hero"
+import { RiCamera2Fill, RiPlaneLine } from "@remixicon/react"
 
-const springTransition = {
-  type: "spring",
-  stiffness: 400,
-  damping: 25,
-}
 export default function Home() {
   return (
     <main className="relative mx-auto mt-32 flex flex-col">
-      <FadeContainer className="relative flex flex-col items-center justify-center py-24">
-        <FadeDiv className="mx-auto">
-          <a
-            aria-label="View latest update the changelog page"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mx-auto w-full"
-          >
-            <div className="inline-flex max-w-full items-center gap-3 rounded-full bg-white/5 px-2.5 py-0.5 pl-0.5 pr-3 text-sm font-medium text-gray-900 shadow-lg shadow-orange-400/20 ring-1 ring-black/10 filter backdrop-blur-[1px] transition-colors hover:bg-black/5 focus:outline-none">
-              <span className="shrink-0 truncate rounded-full border bg-gray-50 px-2.5 py-1 text-xs text-gray-600">
-                News
-              </span>
-              <span className="flex items-center gap-1 truncate">
-                <span className="w-full truncate">
-                  Artificial Intelligence is Key
-                </span>
-
-                <RiArrowRightUpLine className="size-4 shrink-0 text-gray-700" />
-              </span>
-            </div>
-          </a>
-        </FadeDiv>
-        <h1 className="mt-8 text-center text-8xl font-semibold leading-[5.5rem] tracking-tighter text-gray-900">
-          <FadeSpan>Autonomy</FadeSpan> <FadeSpan>for</FadeSpan>
-          <br />
-          <FadeSpan>every</FadeSpan> <FadeSpan>Mission</FadeSpan>
-        </h1>
-        <p className="mt-8 max-w-xl text-balance text-center text-xl text-gray-700">
-          <FadeSpan>A network of autonomous systems</FadeSpan>{" "}
-          <FadeSpan>that provide integrated monitoring</FadeSpan>{" "}
-          <FadeSpan> across ground, water, and air environments.</FadeSpan>
-        </p>
-        <FadeDiv>
-          <a
-            className="mt-6 inline-flex cursor-pointer flex-row items-center justify-center gap-1 whitespace-nowrap rounded-md bg-gray-50 px-5 py-3 font-medium leading-4 tracking-wide text-gray-900 shadow-[0_0_0_2px_rgba(0,0,0,0.04),0_0_14px_0_rgba(255,255,255,0.19),inset_0_-1px_0_rgba(0,0,0,0.2),inset_0_1px_0_#fff] transition-all duration-200 ease-in-out"
-            href="#"
-          >
-            Launch today
-          </a>
-        </FadeDiv>
-        <div className="absolute inset-0 -z-10 flex items-center justify-center">
-          <GameOfLife />
-        </div>
-      </FadeContainer>
+      <div className="py-24">
+        <Hero />
+      </div>
 
       <div className="relative mx-auto mt-48 h-[80rem] w-full max-w-6xl">
         <div className="pointer-events-none absolute inset-0 flex h-full items-center justify-center">
@@ -165,7 +118,7 @@ export default function Home() {
                           <path
                             key={i}
                             d={`M${-106 + offset} 110L${22 + offset} -18`}
-                            className="stroke-gray-200"
+                            className="stroke-gray-200/70"
                             strokeWidth="1"
                           />
                         )
@@ -253,23 +206,44 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              <div className="relative mt-48 flex flex-col items-center justify-center">
+                <Orbit
+                  durationSeconds={40}
+                  radiusPx={144}
+                  orbitingObjects={[
+                    // Planet
+                    <div className="flex items-center justify-center rounded-full border bg-white p-2">
+                      <RiPlaneLine className="size-5 text-gray-900" />
+                    </div>,
+
+                    <div className="flex items-center justify-center rounded-full border bg-white p-2">
+                      <RiPlaneLine className="size-5 text-gray-900" />
+                    </div>,
+
+                    // Star
+                    <div
+                      key="star"
+                      className="h-4 w-4 rotate-45 bg-yellow-400 shadow-lg"
+                    />,
+
+                    // Custom component
+                    <div className="size-5 rounded bg-black" />,
+
+                    // Icon
+                    <RiCamera2Fill key="camera" size={16} color="red" />,
+                  ]}
+                >
+                  <div className="relative flex h-48 w-48 items-center justify-center">
+                    <div className="rounded-full p-1 ring-1 ring-black/10">
+                      <div className="size-20 rounded-full bg-white shadow-[inset_0px_-15px_20px_rgba(0,0,0,0.1),0_10px_15px_0_rgba(0,0,0,0.19)] ring-1 ring-black/5"></div>
+                    </div>
+                  </div>
+                </Orbit>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* <div className="relative mx-auto mt-12 h-96 w-full max-w-6xl">
-        <div className="pointer-events-none absolute inset-0 flex h-full items-center justify-center">
-          <div className="hidden h-full w-full grid-cols-4 divide-x divide-gray-300 border-l border-r border-dashed border-gray-300 px-4 *:border-dashed lg:grid">
-            <div className="col-span-4">
-              <div className="size-full rounded border bg-white">content</div>
-            </div>
-            <div className=""></div>
-            <div className=""></div>
-            <div className=""></div>
-          </div>
-        </div>
-      </div> */}
     </main>
   )
 }
