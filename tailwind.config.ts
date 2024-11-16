@@ -60,6 +60,10 @@ const config: Config = {
           from: { opacity: "1", transform: "translateX(0)" },
           to: { opacity: "0", transform: "translateX(100%)" },
         },
+        dashes: {
+          "0%": { "stroke-dashoffset": "-7" },
+          "100%": { "stroke-dashoffset": "0" },
+        },
       },
     },
     animation: {
@@ -81,6 +85,8 @@ const config: Config = {
       drawerSlideLeftAndFade:
         "drawerSlideLeftAndFade 150ms cubic-bezier(0.16, 1, 0.3, 1)",
       drawerSlideRightAndFade: "drawerSlideRightAndFade 150ms ease-in",
+      dashes: "dashes 0.8s linear infinite",
+      dashesReverse: "dashes 0.8s linear infinite reverse",
     },
   },
   plugins: [formsPlugin],

@@ -179,29 +179,57 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <div className="relative mt-20 flex flex-col items-center justify-center">
+              <div className="relative mt-28 flex flex-col items-center justify-center">
                 <div className="mx-auto w-fit border border-dashed bg-white">
                   Base Station
                 </div>
+
                 <svg
-                  className="mx-auto -mt-1 h-60"
-                  viewBox="0 0 236 184"
+                  viewBox="0 0 136 77"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="w-[350px]"
                 >
                   <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M6.65408 182.871C6.25844 183.427 5.43492 183.432 5.03231 182.881L1.53085 178.093C0.990795 177.355 1.64392 176.339 2.53996 176.524L4.85028 177V166.931C4.85028 135.451 30.37 109.931 61.8503 109.931C81.9118 109.931 99.4647 99.1903 109.072 83.1454C114.122 74.3071 116.851 64.2255 116.851 53.8543V1C116.851 0.447716 117.298 0 117.851 0V0C118.403 0 118.851 0.447715 118.851 1V53.8543V54.2129C118.851 61.0356 120.026 67.7359 122.262 74.0438C130.028 94.9976 150.196 109.931 173.851 109.931C205.331 109.931 230.851 135.451 230.851 166.931V177L233.033 176.535C233.925 176.345 234.585 177.35 234.056 178.093L230.654 182.871C230.259 183.427 229.435 183.432 229.033 182.881L225.531 178.093C224.991 177.355 225.644 176.339 226.54 176.524L228.851 177V166.931C228.851 136.556 204.226 111.931 173.851 111.931C161.741 111.931 150.512 108.155 141.28 101.715C150.018 112.562 154.851 126.127 154.851 140.195V177L157.033 176.535C157.925 176.345 158.585 177.35 158.056 178.093L154.654 182.871C154.259 183.427 153.435 183.432 153.033 182.881L149.531 178.093C148.991 177.355 149.644 176.339 150.54 176.524L152.851 177V140.195C152.851 124.3 146.474 109.07 135.149 97.9164C128.48 91.3488 123.471 83.4136 120.395 74.7629C119.304 71.8212 118.448 68.7649 117.851 65.617C116.586 72.2847 114.16 78.5413 110.791 84.1685C107.913 89.1995 104.306 93.8402 100.043 97.926C88.4212 109.061 81.8503 124.459 81.8503 140.554V177L84.0336 176.535C84.9255 176.345 85.5854 177.35 85.0564 178.093L81.6541 182.871C81.2585 183.427 80.4349 183.432 80.0323 182.881L76.5309 178.093C75.9908 177.355 76.6439 176.339 77.54 176.524L79.8503 177V140.554C79.8503 126.709 84.5527 113.364 93.0521 102.641C84.088 108.515 73.3681 111.931 61.8503 111.931C31.4746 111.931 6.85028 136.556 6.85028 166.931V177L9.03359 176.535C9.92548 176.345 10.5854 177.35 10.0564 178.093L6.65408 182.871Z"
-                    fill="url(#paint0_linear_11560_66)"
+                    d="M90.0003 77C90.0003 47.288 72.2553 41.0564 72.0005 17.5761L72.0003 -2.81494e-05"
+                    stroke="url(#paint0_linear_11560_66)"
+                    strokeWidth="1"
+                    strokeLinecap="square"
+                    strokeDasharray="2 5"
+                    className="animate-dashes"
                   />
+                  <path
+                    d="M46.0671 77C46.0671 47.288 63.8121 41.0564 64.0669 17.5761L64.0671 -2.81494e-05"
+                    stroke="url(#paint0_linear_11560_66)"
+                    strokeWidth="1"
+                    strokeLinecap="square"
+                    strokeDasharray="2 5"
+                    className="animate-dashes"
+                  />
+                  <path
+                    d="M135 77L135 73.1118C135 63.9272 129.545 55.3433 120.445 50.2095L99.5548 38.4238C90.4552 33.2901 80 24.7062 80 15.5215L80 7.39098e-06"
+                    stroke="url(#paint0_linear_11560_66)"
+                    strokeWidth="1"
+                    strokeLinecap="square"
+                    strokeDasharray="2 5"
+                    className="animate-dashesReverse"
+                  />
+                  <path
+                    d="M1 77L1 73.1118C0.999999 63.9272 6.455 55.3433 15.555 50.2095L36.4452 38.4238C45.5448 33.2901 56 24.7062 56 15.5215L56 4.98685e-06"
+                    stroke="url(#paint0_linear_11560_66)"
+                    strokeWidth="1"
+                    strokeLinecap="square"
+                    strokeDasharray="2 5"
+                    className="animate-dashesReverse"
+                  />
+
                   <defs>
                     <linearGradient
                       id="paint0_linear_11560_66"
                       x1="101.122"
                       y1="204.455"
                       x2="101.122"
-                      y2="56.1364"
+                      y2="0"
                       gradientUnits="userSpaceOnUse"
                     >
                       <stop stopColor="#131313" />
@@ -209,17 +237,18 @@ export default function Home() {
                     </linearGradient>
                   </defs>
                 </svg>
-                <div className="mt-2 flex gap-[50px]">
-                  <div className="flex items-center justify-center rounded border bg-white p-2">
+
+                <div className="flex gap-[65px]">
+                  <div className="flex items-center justify-center rounded-sm border bg-white p-2">
                     <RiPlaneLine className="size-8 text-gray-900" />
                   </div>
-                  <div className="flex items-center justify-center rounded border bg-white p-2">
+                  <div className="flex items-center justify-center rounded-sm border bg-white p-2">
                     <RiPlaneLine className="size-8 text-gray-900" />
                   </div>
-                  <div className="flex items-center justify-center rounded border bg-white p-2">
+                  <div className="flex items-center justify-center rounded-sm border bg-white p-2">
                     <RiPlaneLine className="size-8 text-gray-900" />
                   </div>
-                  <div className="flex items-center justify-center rounded border bg-white p-2">
+                  <div className="flex items-center justify-center rounded-sm border bg-white p-2">
                     <RiPlaneLine className="size-8 text-gray-900" />
                   </div>
                 </div>
