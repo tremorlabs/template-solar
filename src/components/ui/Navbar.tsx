@@ -47,13 +47,12 @@ export function NavBar() {
               </Link>
             </div>
           </nav>
-          <Button className="hidden h-10 font-semibold md:flex">
-            Book a demo
+          <Button
+            variant="secondary"
+            className="hidden h-10 font-semibold md:flex"
+          >
+            Get a quote
           </Button>
-          <div className="flex gap-x-2 md:hidden">
-            <Button>Book demo</Button>
-            {scrolled ? <Button>Book demo</Button> : null}
-          </div>
         </div>
         {/* <nav
           className={cx(
