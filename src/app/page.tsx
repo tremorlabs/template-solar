@@ -1,12 +1,14 @@
 "use client"
-import { PulseBeamsSecond } from "@/components/Beams"
 import { Orbit } from "@/components/Orbit"
 import { Hero } from "@/components/ui/Hero"
+import { Map } from "@/components/ui/Map/Map"
 import {
+  RiCarFill,
   RiCheckFill,
   RiCircleLine,
-  RiLoader3Fill,
-  RiPlaneLine,
+  RiLoaderFill,
+  RiPlaneFill,
+  RiTruckFill,
 } from "@remixicon/react"
 import { RasterMark } from "../../public/RasterMark"
 
@@ -16,7 +18,6 @@ export default function Home() {
       <div className="py-24">
         <Hero />
       </div>
-
       <div className="relative mx-auto mt-48 h-[95rem] w-full max-w-6xl">
         <div className="pointer-events-none absolute inset-0 flex h-full items-center justify-center">
           <div className="mx-px grid h-full w-full grid-cols-4">
@@ -149,11 +150,11 @@ export default function Home() {
                       key="obj1"
                       className="relative flex items-center justify-center"
                     >
-                      <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
+                      <RiTruckFill className="z-10 size-5 text-gray-900" />
                       <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                       <div className="absolute -top-4 left-8">
                         <div className="flex gap-1">
-                          <div className="flex items-center justify-center rounded-l-full bg-red-500 bg-white/50 p-1 text-xs ring-1 ring-red-500/30">
+                          <div className="flex items-center justify-center rounded-l-full bg-red-500 p-1 text-xs ring-1 ring-red-500/30">
                             <RiCircleLine className="size-3 shrink-0 text-white" />
                           </div>
                           <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-red-500/30">
@@ -173,12 +174,12 @@ export default function Home() {
                       key="obj2"
                       className="relative flex items-center justify-center"
                     >
-                      <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
+                      <RiPlaneFill className="z-10 size-5 rotate-90 text-gray-900" />
                       <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                       <div className="absolute -top-4 left-8">
                         <div className="flex gap-1">
-                          <div className="flex items-center justify-center rounded-l-full bg-gray-500 bg-white/50 p-1 text-xs ring-1 ring-gray-500/30">
-                            <RiLoader3Fill className="animate-spin size-3 shrink-0 text-white" />
+                          <div className="flex items-center justify-center rounded-l-full bg-gray-500 p-1 text-xs ring-1 ring-gray-500/30">
+                            <RiLoaderFill className="animate-spin size-3 shrink-0 text-white" />
                           </div>
                           <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-500/30">
                             Connecting
@@ -197,7 +198,7 @@ export default function Home() {
                       key="obj3"
                       className="relative flex items-center justify-center"
                     >
-                      <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
+                      <RiCarFill className="z-10 size-5 text-gray-900" />
                       <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                       <div
                         style={{
@@ -210,11 +211,11 @@ export default function Home() {
                       key="obj4"
                       className="relative flex items-center justify-center"
                     >
-                      <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
+                      <RiPlaneFill className="z-10 size-5 rotate-90 text-gray-900" />
                       <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                       <div className="absolute -top-4 left-8">
                         <div className="flex gap-1">
-                          <div className="flex items-center justify-center rounded-l-full bg-emerald-500 bg-white/50 p-1 text-xs ring-1 ring-emerald-500/30">
+                          <div className="flex items-center justify-center rounded-l-full bg-emerald-500 p-1 text-xs ring-1 ring-emerald-500/30">
                             <RiCheckFill className="size-3 shrink-0 text-white" />
                           </div>
                           <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-emerald-500/30">
@@ -234,7 +235,7 @@ export default function Home() {
                       key="obj5"
                       className="relative flex items-center justify-center"
                     >
-                      <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
+                      <RiPlaneFill className="z-10 size-5 rotate-90 text-gray-900" />
                       <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                       <div
                         style={{
@@ -316,16 +317,16 @@ export default function Home() {
 
                 <div className="flex gap-[65px]">
                   <div className="flex items-center justify-center rounded-sm border bg-white p-2">
-                    <RiPlaneLine className="size-8 text-gray-900" />
+                    <RiPlaneFill className="size-8 text-gray-900" />
                   </div>
                   <div className="flex items-center justify-center rounded-sm border bg-white p-2">
-                    <RiPlaneLine className="size-8 text-gray-900" />
+                    <RiPlaneFill className="size-8 text-gray-900" />
                   </div>
                   <div className="flex items-center justify-center rounded-sm border bg-white p-2">
-                    <RiPlaneLine className="size-8 text-gray-900" />
+                    <RiPlaneFill className="size-8 text-gray-900" />
                   </div>
                   <div className="flex items-center justify-center rounded-sm border bg-white p-2">
-                    <RiPlaneLine className="size-8 text-gray-900" />
+                    <RiPlaneFill className="size-8 text-gray-900" />
                   </div>
                 </div>
               </div>
@@ -333,7 +334,56 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <PulseBeamsSecond />
+      <section className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-xl shadow-2xl shadow-[#F3A69A]/70">
+        {/* Original cloud background image */}
+        <img
+          alt="clouds background"
+          decoding="async"
+          src="/images/clouds.png"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <img
+          alt="clouds background"
+          decoding="async"
+          src="/images/drone.png"
+          className="animate-hover absolute right-0 h-full"
+        />
+
+        <div className="z-20p-6 relative md:p-12 lg:p-24 lg:pb-40">
+          <div className="mb-4 md:mb-8 lg:mb-14">
+            <blockquote className="text-lg leading-relaxed tracking-tight text-gray-900 md:text-2xl lg:text-3xl">
+              "
+              <strong className="font-semibold">
+                Valar transformed our environmental monitoring capabilities.
+              </strong>{" "}
+              Their autonomous network provides real-time data on forest health,
+              wildlife patterns, and ecosystem changes with unprecedented
+              precision and efficiency."
+            </blockquote>
+          </div>
+
+          {/* Author section with responsive layout */}
+          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+            <div className="relative shrink-0 rounded p-1 ring-1 ring-white/50 backdrop-blur-sm">
+              <img
+                alt="Dr. Sarah Miller"
+                src="/images/smiller.jpeg"
+                className="h-14 w-14 rounded object-cover"
+              />
+            </div>
+            <div>
+              <div className="text-base font-medium text-gray-900">
+                Dr. Sarah Miller
+              </div>
+              <div className="max-w-xs text-sm text-gray-600">
+                Director of Global Conservation Technologies
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <Map />
+      <section className="mt-24">content</section>
     </main>
   )
 }

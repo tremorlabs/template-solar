@@ -64,6 +64,14 @@ const config: Config = {
           "0%": { "stroke-dashoffset": "-7" },
           "100%": { "stroke-dashoffset": "0" },
         },
+        hover: {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
       },
       animation: {
         hide: "hide 150ms cubic-bezier(0.16, 1, 0.3, 1)",
@@ -88,6 +96,7 @@ const config: Config = {
         drawerSlideRightAndFade: "drawerSlideRightAndFade 150ms ease-in",
         dashes: "dashes 0.8s linear infinite",
         dashesReverse: "dashes 0.8s linear infinite reverse",
+        hover: "hover 4s ease-in-out infinite",
       },
     },
   },

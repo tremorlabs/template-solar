@@ -39,7 +39,7 @@ export function Hero() {
       </p>
       <FadeDiv>
         <a
-          className="mt-6 inline-flex cursor-pointer flex-row items-center justify-center gap-1 whitespace-nowrap rounded-md bg-gray-50 px-5 py-3 font-medium leading-4 tracking-wide text-gray-900 shadow-[0_0_0_2px_rgba(0,0,0,0.04),0_0_14px_0_rgba(255,255,255,0.19),inset_0_-1px_0_rgba(0,0,0,0.2),inset_0_1px_0_#fff] transition-all duration-200 ease-in-out"
+          className="mt-6 inline-flex cursor-pointer flex-row items-center justify-center gap-1 whitespace-nowrap rounded-md border-b-[1.5px] border-orange-700 bg-gradient-to-b from-orange-400 to-orange-500 px-5 py-3 font-medium leading-4 tracking-wide text-white shadow-[0_0_0_2px_rgba(0,0,0,0.04),0_0_14px_0_rgba(255,255,255,0.19)] transition-all duration-200 ease-in-out hover:shadow-orange-300"
           href="#"
         >
           Launch today
