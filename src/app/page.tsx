@@ -179,7 +179,7 @@ export default function Home() {
                       <div className="absolute -top-4 left-8">
                         <div className="flex gap-1">
                           <div className="flex items-center justify-center rounded-l-full bg-gray-500 p-1 text-xs ring-1 ring-gray-500/30">
-                            <RiLoaderFill className="animate-spin size-3 shrink-0 text-white" />
+                            <RiLoaderFill className="size-3 shrink-0 animate-spin text-white" />
                           </div>
                           <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-500/30">
                             Connecting
@@ -346,19 +346,18 @@ export default function Home() {
           alt="clouds background"
           decoding="async"
           src="/images/drone.png"
-          className="animate-hover absolute right-0 h-full"
+          className="absolute right-12 top-[17rem] w-[40rem] animate-hover"
         />
 
         <div className="z-20p-6 relative md:p-12 lg:p-24 lg:pb-40">
           <div className="mb-4 md:mb-8 lg:mb-14">
             <blockquote className="text-lg leading-relaxed tracking-tight text-gray-900 md:text-2xl lg:text-3xl">
-              "
               <strong className="font-semibold">
                 Valar transformed our environmental monitoring capabilities.
               </strong>{" "}
               Their autonomous network provides real-time data on forest health,
               wildlife patterns, and ecosystem changes with unprecedented
-              precision and efficiency."
+              precision and efficiency.&rdquo;
             </blockquote>
           </div>
 
