@@ -145,7 +145,10 @@ export default function Home() {
                   radiusPx={160}
                   keepUpright
                   orbitingObjects={[
-                    <div className="relative flex items-center justify-center">
+                    <div
+                      key="obj1"
+                      className="relative flex items-center justify-center"
+                    >
                       <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
                       <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                       <div className="absolute -top-4 left-8">
@@ -166,7 +169,10 @@ export default function Home() {
                       ></div>
                     </div>,
 
-                    <div className="relative flex items-center justify-center">
+                    <div
+                      key="obj2"
+                      className="relative flex items-center justify-center"
+                    >
                       <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
                       <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                       <div className="absolute -top-4 left-8">
@@ -187,7 +193,10 @@ export default function Home() {
                       ></div>
                     </div>,
 
-                    <div className="relative flex items-center justify-center">
+                    <div
+                      key="obj3"
+                      className="relative flex items-center justify-center"
+                    >
                       <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
                       <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                       <div
@@ -197,7 +206,10 @@ export default function Home() {
                         className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
                       ></div>
                     </div>,
-                    <div className="relative flex items-center justify-center">
+                    <div
+                      key="obj4"
+                      className="relative flex items-center justify-center"
+                    >
                       <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
                       <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                       <div className="absolute -top-4 left-8">
@@ -218,7 +230,10 @@ export default function Home() {
                         className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
                       ></div>
                     </div>,
-                    <div className="relative flex items-center justify-center">
+                    <div
+                      key="obj5"
+                      className="relative flex items-center justify-center"
+                    >
                       <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
                       <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                       <div
