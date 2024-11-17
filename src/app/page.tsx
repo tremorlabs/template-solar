@@ -1,7 +1,14 @@
 "use client"
+import { PulseBeamsSecond } from "@/components/Beams"
 import { Orbit } from "@/components/Orbit"
 import { Hero } from "@/components/ui/Hero"
-import { RiCamera2Fill, RiPlaneLine } from "@remixicon/react"
+import {
+  RiCheckFill,
+  RiCircleLine,
+  RiLoader3Fill,
+  RiPlaneLine,
+} from "@remixicon/react"
+import { RasterMark } from "../../public/RasterMark"
 
 export default function Home() {
   return (
@@ -10,7 +17,7 @@ export default function Home() {
         <Hero />
       </div>
 
-      <div className="relative mx-auto mt-48 h-[80rem] w-full max-w-6xl">
+      <div className="relative mx-auto mt-48 h-[95rem] w-full max-w-6xl">
         <div className="pointer-events-none absolute inset-0 flex h-full items-center justify-center">
           <div className="mx-px grid h-full w-full grid-cols-4">
             <div
@@ -132,7 +139,108 @@ export default function Home() {
                   />
                 </svg>
               </div>
-              <div className="relative mt-28 flex flex-col items-center justify-center">
+              <div className="relative -ml-0.5 mt-20 flex flex-col items-center justify-center">
+                <Orbit
+                  durationSeconds={40}
+                  radiusPx={160}
+                  keepUpright
+                  orbitingObjects={[
+                    <div className="relative flex items-center justify-center">
+                      <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
+                      <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                      <div className="absolute -top-4 left-8">
+                        <div className="flex gap-1">
+                          <div className="flex items-center justify-center rounded-l-full bg-red-500 bg-white/50 p-1 text-xs ring-1 ring-red-500/30">
+                            <RiCircleLine className="size-3 shrink-0 text-white" />
+                          </div>
+                          <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-red-500/30">
+                            Critical
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        style={{
+                          animationDelay: "1s",
+                        }}
+                        className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                      ></div>
+                    </div>,
+
+                    <div className="relative flex items-center justify-center">
+                      <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
+                      <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                      <div className="absolute -top-4 left-8">
+                        <div className="flex gap-1">
+                          <div className="flex items-center justify-center rounded-l-full bg-gray-500 bg-white/50 p-1 text-xs ring-1 ring-gray-500/30">
+                            <RiLoader3Fill className="animate-spin size-3 shrink-0 text-white" />
+                          </div>
+                          <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-500/30">
+                            Connecting
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        style={{
+                          animationDelay: "4s",
+                        }}
+                        className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                      ></div>
+                    </div>,
+
+                    <div className="relative flex items-center justify-center">
+                      <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
+                      <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                      <div
+                        style={{
+                          animationDelay: "2s",
+                        }}
+                        className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                      ></div>
+                    </div>,
+                    <div className="relative flex items-center justify-center">
+                      <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
+                      <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                      <div className="absolute -top-4 left-8">
+                        <div className="flex gap-1">
+                          <div className="flex items-center justify-center rounded-l-full bg-emerald-500 bg-white/50 p-1 text-xs ring-1 ring-emerald-500/30">
+                            <RiCheckFill className="size-3 shrink-0 text-white" />
+                          </div>
+                          <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-emerald-500/30">
+                            Operational
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        style={{
+                          animationDelay: "6s",
+                        }}
+                        className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                      ></div>
+                    </div>,
+                    <div className="relative flex items-center justify-center">
+                      <RiPlaneLine className="z-10 size-5 rotate-90 text-gray-900" />
+                      <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                      <div
+                        style={{
+                          animationDelay: "3s",
+                        }}
+                        className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                      ></div>
+                    </div>,
+                  ]}
+                >
+                  <div className="relative flex h-48 w-48 items-center justify-center">
+                    <div className="rounded-full p-1 ring-1 ring-black/10">
+                      <div className="relative z-10 flex size-20 items-center justify-center rounded-full bg-white shadow-[inset_0px_-15px_20px_rgba(0,0,0,0.1),0_10px_15px_0_rgba(0,0,0,0.19)] ring-1 ring-black/20">
+                        <RasterMark className="size-10" />
+                      </div>
+                      <div className="absolute inset-12 animate-[spin_8s_linear_infinite] rounded-full bg-gradient-to-t from-transparent via-orange-400 to-transparent blur-lg" />
+                    </div>
+                  </div>
+                </Orbit>
+              </div>
+              <div className="relative mt-40 flex flex-col items-center justify-center">
                 <div className="mx-auto w-fit border border-dashed bg-white">
                   Base Station
                 </div>
@@ -206,44 +314,11 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="relative mt-48 flex flex-col items-center justify-center">
-                <Orbit
-                  durationSeconds={40}
-                  radiusPx={144}
-                  orbitingObjects={[
-                    // Planet
-                    <div className="flex items-center justify-center rounded-full border bg-white p-2">
-                      <RiPlaneLine className="size-5 text-gray-900" />
-                    </div>,
-
-                    <div className="flex items-center justify-center rounded-full border bg-white p-2">
-                      <RiPlaneLine className="size-5 text-gray-900" />
-                    </div>,
-
-                    // Star
-                    <div
-                      key="star"
-                      className="h-4 w-4 rotate-45 bg-yellow-400 shadow-lg"
-                    />,
-
-                    // Custom component
-                    <div className="size-5 rounded bg-black" />,
-
-                    // Icon
-                    <RiCamera2Fill key="camera" size={16} color="red" />,
-                  ]}
-                >
-                  <div className="relative flex h-48 w-48 items-center justify-center">
-                    <div className="rounded-full p-1 ring-1 ring-black/10">
-                      <div className="size-20 rounded-full bg-white shadow-[inset_0px_-15px_20px_rgba(0,0,0,0.1),0_10px_15px_0_rgba(0,0,0,0.19)] ring-1 ring-black/5"></div>
-                    </div>
-                  </div>
-                </Orbit>
-              </div>
             </div>
           </div>
         </div>
       </div>
+      <PulseBeamsSecond />
     </main>
   )
 }

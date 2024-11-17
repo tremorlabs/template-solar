@@ -4,7 +4,7 @@ import GameOfLife from "./HeroBackground"
 
 export function Hero() {
   return (
-    <FadeContainer className="relative flex flex-col items-center justify-center py-24">
+    <FadeContainer className="relative flex flex-col items-center justify-center">
       <FadeDiv className="mx-auto">
         <a
           aria-label="View latest update the changelog page"
