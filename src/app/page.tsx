@@ -1,7 +1,8 @@
 "use client"
 import { Orbit } from "@/components/Orbit"
 import { Hero } from "@/components/ui/Hero"
-import { Map } from "@/components/ui/Map/Map"
+import { Map2 } from "@/components/ui/Map2/Map2"
+import Testimonial from "@/components/ui/Testimonial"
 import {
   RiCarFill,
   RiCheckFill,
@@ -10,7 +11,7 @@ import {
   RiPlaneFill,
   RiTruckFill,
 } from "@remixicon/react"
-import { RasterMark } from "../../public/RasterMark"
+import { RasterMark } from "../../public/SolarMark"
 
 export default function Home() {
   return (
@@ -56,50 +57,51 @@ export default function Home() {
             <div className="col-span-2 m-2 mt-20">
               <div>
                 <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
-                  Modular solutions
+                  Smart Farming Solutions
                   <div className="absolute -left-[7px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
                 </h2>
                 <p className="mt-2 text-balance text-5xl font-semibold tracking-tighter text-gray-900">
-                  A network of autonomous systems for integrated monitoring
+                  A network of autonomous systems for complete farm monitoring
                 </p>
                 <p className="mt-4 text-balance text-gray-700">
-                  Deploy seamless monitoring and rapid response capabilities
-                  across ground, water, and air environments with our integrated
-                  platform. Use our autonomous systems for comprehensive
-                  awareness, with processing happening locally at each
-                  deployment point for maximum efficiency and reliability.
+                  Deploy intelligent monitoring and automated response systems
+                  across your fields, irrigation networks, and aerial operations
+                  with our integrated platform. Use our autonomous systems for
+                  comprehensive crop management, with processing happening
+                  locally at each sensor point for maximum efficiency and
+                  reliability.
                 </p>
               </div>
               <div className="mt-48">
                 <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
-                  Edge Intelligence
+                  Field Intelligence
                   <div className="absolute -left-[7px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
                 </h2>
                 <p className="mt-2 text-balance text-5xl font-semibold tracking-tighter text-gray-900">
-                  Real-time processing with distributed AI
+                  Real-time insights with distributed farm AI
                 </p>
                 <p className="mt-4 text-balance text-gray-700">
-                  Process data instantly where it&apos;s collected, enabling
-                  rapid decision-making without network dependencies. Our
-                  advanced AI runs efficiently on edge devices, delivering
-                  intelligent insights while maintaining data privacy and
-                  reducing bandwidth requirements.
+                  Process agricultural data instantly where it&apos;s collected,
+                  enabling immediate decision-making without internet
+                  dependencies. Our advanced AI runs efficiently on field
+                  sensors, delivering actionable insights while maintaining data
+                  privacy and minimizing connectivity requirements.
                 </p>
               </div>
               <div className="mt-48">
                 <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
-                  Seamless Integration
+                  Easy Expansion
                   <div className="absolute -left-[7px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
                 </h2>
                 <p className="mt-2 text-balance text-5xl font-semibold tracking-tighter text-gray-900">
-                  Connect and expand with plug-and-play simplicity
+                  Scale your smart farm with plug-and-play simplicity
                 </p>
                 <p className="mt-4 text-balance text-gray-700">
-                  Add new capabilities to your network with zero configuration
-                  required. Our systems automatically recognize and coordinate
-                  with each other, creating a robust mesh network that grows
-                  stronger with each additional node while maintaining
-                  enterprise-grade security.
+                  Add new sensors and capabilities to your farm network with
+                  zero setup required. Our systems automatically connect and
+                  coordinate with each other, creating a robust agricultural
+                  network that grows stronger with each additional sensor while
+                  maintaining enterprise-grade security.
                 </p>
               </div>
             </div>
@@ -154,11 +156,11 @@ export default function Home() {
                       <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                       <div className="absolute -top-4 left-8">
                         <div className="flex gap-1">
-                          <div className="flex items-center justify-center rounded-l-full bg-red-500 p-1 text-xs ring-1 ring-red-500/30">
+                          <div className="flex items-center justify-center rounded-l-full bg-red-500 p-1 text-xs ring-1 ring-gray-200">
                             <RiCircleLine className="size-3 shrink-0 text-white" />
                           </div>
-                          <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-red-500/30">
-                            Critical
+                          <div className="whitespace-nowrap rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-200">
+                            Drivetrain Error
                           </div>
                         </div>
                       </div>
@@ -178,11 +180,11 @@ export default function Home() {
                       <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                       <div className="absolute -top-4 left-8">
                         <div className="flex gap-1">
-                          <div className="flex items-center justify-center rounded-l-full bg-gray-500 p-1 text-xs ring-1 ring-gray-500/30">
+                          <div className="flex items-center justify-center rounded-l-full bg-gray-500 p-1 text-xs ring-1 ring-gray-200">
                             <RiLoaderFill className="size-3 shrink-0 animate-spin text-white" />
                           </div>
-                          <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-500/30">
-                            Connecting
+                          <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-200">
+                            Charging
                           </div>
                         </div>
                       </div>
@@ -215,11 +217,11 @@ export default function Home() {
                       <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                       <div className="absolute -top-4 left-8">
                         <div className="flex gap-1">
-                          <div className="flex items-center justify-center rounded-l-full bg-emerald-500 p-1 text-xs ring-1 ring-emerald-500/30">
+                          <div className="flex items-center justify-center rounded-l-full bg-emerald-500 p-1 text-xs ring-1 ring-gray-200">
                             <RiCheckFill className="size-3 shrink-0 text-white" />
                           </div>
-                          <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-emerald-500/30">
-                            Operational
+                          <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-200">
+                            Farming
                           </div>
                         </div>
                       </div>
@@ -334,54 +336,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <section className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-xl shadow-2xl shadow-[#F3A69A]/70">
-        {/* Original cloud background image */}
-        <img
-          alt="clouds background"
-          decoding="async"
-          src="/images/clouds.png"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <img
-          alt="clouds background"
-          decoding="async"
-          src="/images/drone.png"
-          className="absolute right-12 top-[17rem] w-[40rem] animate-hover"
-        />
-
-        <div className="z-20p-6 relative md:p-12 lg:p-24 lg:pb-40">
-          <div className="mb-4 md:mb-8 lg:mb-14">
-            <blockquote className="text-lg leading-relaxed tracking-tight text-gray-900 md:text-2xl lg:text-3xl">
-              <strong className="font-semibold">
-                Valar transformed our environmental monitoring capabilities.
-              </strong>{" "}
-              Their autonomous network provides real-time data on forest health,
-              wildlife patterns, and ecosystem changes with unprecedented
-              precision and efficiency.&rdquo;
-            </blockquote>
-          </div>
-
-          {/* Author section with responsive layout */}
-          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-            <div className="relative shrink-0 rounded p-1 ring-1 ring-white/50 backdrop-blur-sm">
-              <img
-                alt="Dr. Sarah Miller"
-                src="/images/smiller.jpeg"
-                className="h-14 w-14 rounded object-cover"
-              />
-            </div>
-            <div>
-              <div className="text-base font-medium text-gray-900">
-                Dr. Sarah Miller
-              </div>
-              <div className="max-w-xs text-sm text-gray-600">
-                Director of Global Conservation Technologies
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <Map />
+      <Testimonial />
+      <Map2 />
       <section className="mt-24">content</section>
     </main>
   )

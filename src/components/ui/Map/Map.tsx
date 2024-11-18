@@ -74,15 +74,15 @@ export const Map = () => {
         </div>
 
         <div className="pt-20 text-lg font-semibold tracking-tight text-orange-400">
-          Intelligence
+          Farm Management
         </div>
-
         <h2 className="mt-8 max-w-[700px] text-center text-5xl font-semibold tracking-tight text-white">
-          Integrated Command & Control for spacial intelligence
+          Monitoring & Control for Precision Agriculture
         </h2>
         <p className="mt-8 max-w-2xl text-balance text-center text-xl text-gray-400">
-          Unified control of connected systems across ground, water, and air
-          environments, even in areas with limited connectivity.
+          Complete oversight of your farming operations across fields,
+          irrigation systems, and aerial monitoring, delivering insights even in
+          remote rural locations.
         </p>
 
         <div className="mb-24 pt-24">

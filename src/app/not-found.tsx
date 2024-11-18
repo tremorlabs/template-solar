@@ -2,7 +2,7 @@ import { Button } from "@/components/Button"
 import Link from "next/link"
 import { siteConfig } from "./siteConfig"
 
-import { RasterLogo } from "../../public/RasterLogo"
+import { RasterLogo } from "../../public/SolarLogo"
 
 export default function NotFound() {
   return (

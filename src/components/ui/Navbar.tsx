@@ -4,7 +4,7 @@ import { siteConfig } from "@/app/siteConfig"
 import useScroll from "@/lib/useScroll"
 import { cx } from "@/lib/utils"
 import Link from "next/link"
-import { RasterLogo } from "../../../public/RasterLogo"
+import { RasterLogo } from "../../../public/SolarLogo"
 import { Button } from "../Button"
 
 export function NavBar() {
@@ -22,7 +22,7 @@ export function NavBar() {
       <div className="w-full md:my-auto">
         <div className="relative flex items-center justify-between">
           <Link href={siteConfig.baseLinks.home} aria-label="Home">
-            <span className="sr-only">Valar Tech Logo</span>
+            <span className="sr-only">Solar Tech Logo</span>
             <RasterLogo className="w-24" />
           </Link>
           <nav className="hidden md:absolute md:left-1/2 md:top-1/2 md:block md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
