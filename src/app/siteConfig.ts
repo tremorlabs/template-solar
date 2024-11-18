@@ -1,6 +1,6 @@
 export const siteConfig = {
-  name: "Valar Technologies",
-  url: "https://valar.tremor.so",
+  name: "Solar Technologies",
+  url: "https://Solar.tremor.so",
   description: "The database for modern applications.",
   baseLinks: {
     home: "/",
