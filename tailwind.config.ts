@@ -96,7 +96,7 @@ const config: Config = {
         drawerSlideRightAndFade: "drawerSlideRightAndFade 150ms ease-in",
         dashes: "dashes 0.8s linear infinite",
         dashesReverse: "dashes 0.8s linear infinite reverse",
-        hover: "hover 4s ease-in-out infinite",
+        hover: "hover 4s cubic-bezier(0.45, 0, 0.55, 1) infinite",
       },
     },
   },
