@@ -1,6 +1,6 @@
 import Features from "@/components/ui/Features"
 import { Hero } from "@/components/ui/Hero"
-import { Map2 } from "@/components/ui/Map2/Map2"
+import { Map } from "@/components/ui/Map/Map"
 import Testimonial from "@/components/ui/Testimonial"
 
 export default function Home() {
@@ -12,14 +12,11 @@ export default function Home() {
       <div className="mt-52 px-2 xl:px-0">
         <Features />
       </div>
-      {/* <div className="px-2 xl:px-0">
-        <Features2 />
-      </div> */}
       <div className="mt-32 px-2 xl:px-0">
         <Testimonial />
       </div>
       <div className="px-2 xl:px-0">
-        <Map2 />
+        <Map />
       </div>
     </main>
   )
