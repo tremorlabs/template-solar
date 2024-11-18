@@ -9,10 +9,10 @@ import { SVGMap } from "./SVGMap"
 
 export const Map = () => {
   return (
-    <div className="relative mt-36 flex w-full max-w-6xl flex-col items-center justify-center overflow-hidden rounded-2xl bg-gray-950 px-10 shadow-2xl shadow-black/50 sm:px-16 md:px-28 lg:mx-auto">
+    <div className="relative flex w-full max-w-6xl flex-col items-center justify-center overflow-hidden rounded-2xl bg-gray-950 px-10 shadow-2xl shadow-black/50 sm:px-16 md:px-28 lg:mx-auto">
       <div className="absolute left-0 z-10 h-full backdrop-blur-[2px]">
         <svg
-          className="h-full w-8 border-r border-zinc-900 sm:w-20"
+          className="h-full w-8 border-r border-zinc-900 stroke-zinc-800 sm:w-20"
           style={{
             maskImage:
               "linear-gradient(transparent, white 10rem, white calc(100% - 10rem), transparent)",
@@ -20,7 +20,7 @@ export const Map = () => {
         >
           <defs>
             <pattern
-              id="diagonal-pattern"
+              id="diagonal-border-pattern"
               patternUnits="userSpaceOnUse"
               width="64"
               height="64"
@@ -31,19 +31,23 @@ export const Map = () => {
                   <path
                     key={i}
                     d={`M${-106 + offset} 110L${22 + offset} -18`}
-                    className="stroke-zinc-800/60"
+                    stroke=""
                     strokeWidth="1"
                   />
                 )
               })}
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#diagonal-pattern)" />
+          <rect
+            width="100%"
+            height="100%"
+            fill="url(#diagonal-border-pattern)"
+          />
         </svg>
       </div>
       <div className="absolute right-0 z-10 h-full backdrop-blur-[2px]">
         <svg
-          className="h-full w-8 border-l border-zinc-900 sm:w-20"
+          className="h-full w-8 border-r border-zinc-900 stroke-zinc-800 sm:w-20"
           style={{
             maskImage:
               "linear-gradient(transparent, white 10rem, white calc(100% - 10rem), transparent)",
@@ -51,7 +55,7 @@ export const Map = () => {
         >
           <defs>
             <pattern
-              id="diagonal-pattern"
+              id="diagonal-border-pattern"
               patternUnits="userSpaceOnUse"
               width="64"
               height="64"
@@ -62,14 +66,18 @@ export const Map = () => {
                   <path
                     key={i}
                     d={`M${-106 + offset} 110L${22 + offset} -18`}
-                    className="stroke-zinc-800/60"
+                    stroke=""
                     strokeWidth="1"
                   />
                 )
               })}
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#diagonal-pattern)" />
+          <rect
+            width="100%"
+            height="100%"
+            fill="url(#diagonal-border-pattern)"
+          />
         </svg>
       </div>
 

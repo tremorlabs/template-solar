@@ -9,6 +9,7 @@ import {
 import { SolarMark } from "../../../public/SolarMark"
 import { Icons } from "../Icons"
 import { Orbit } from "../Orbit"
+import ChipViz from "./ChipViz"
 
 export default function Features() {
   return (
@@ -145,7 +146,7 @@ export default function Features() {
           >
             <defs>
               <pattern
-                id="diagonal-pattern"
+                id="diagonal-feature-pattern"
                 patternUnits="userSpaceOnUse"
                 width="64"
                 height="64"
@@ -163,13 +164,17 @@ export default function Features() {
                 })}
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#diagonal-pattern)" />
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#diagonal-feature-pattern)"
+            />
           </svg>
           <div className="p-10">
             <div className="relative flex flex-col items-center justify-center">
               <Orbit
                 durationSeconds={40}
-                radiusPx={160}
+                radiusPx={140}
                 keepUpright
                 orbitingObjects={[
                   <div
@@ -178,7 +183,7 @@ export default function Features() {
                   >
                     <RiTruckFill className="z-10 size-5 text-gray-900" />
                     <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
-                    <div className="absolute -top-4 left-8">
+                    <div className="absolute -top-5 left-4">
                       <div className="flex gap-1">
                         <div className="flex items-center justify-center rounded-l-full bg-red-500 p-1 text-xs ring-1 ring-gray-200">
                           <RiCircleLine className="size-3 shrink-0 text-white" />
@@ -202,7 +207,7 @@ export default function Features() {
                   >
                     <RiPlaneFill className="z-10 size-5 rotate-90 text-gray-900" />
                     <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
-                    <div className="absolute -top-4 left-8">
+                    <div className="absolute -top-5 left-4">
                       <div className="flex gap-1">
                         <div className="flex items-center justify-center rounded-l-full bg-gray-500 p-1 text-xs ring-1 ring-gray-200">
                           <RiLoaderFill className="size-3 shrink-0 animate-spin text-white" />
@@ -239,7 +244,7 @@ export default function Features() {
                   >
                     <Icons.QuadCopter className="z-10 size-5 rotate-90 text-gray-900" />
                     <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
-                    <div className="absolute -top-4 left-8">
+                    <div className="absolute -top-5 left-4">
                       <div className="flex gap-1">
                         <div className="flex items-center justify-center rounded-l-full bg-emerald-500 p-1 text-xs ring-1 ring-gray-200">
                           <RiCheckLine className="size-3 shrink-0 text-white" />
@@ -311,7 +316,7 @@ export default function Features() {
           >
             <defs>
               <pattern
-                id="diagonal-pattern"
+                id="diagonal-feature-pattern"
                 patternUnits="userSpaceOnUse"
                 width="64"
                 height="64"
@@ -329,125 +334,14 @@ export default function Features() {
                 })}
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#diagonal-pattern)" />
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#diagonal-feature-pattern)"
+            />
           </svg>
           <div className="p-10">
-            <div className="relative flex flex-col items-center justify-center">
-              <Orbit
-                durationSeconds={40}
-                radiusPx={160}
-                keepUpright
-                orbitingObjects={[
-                  <div
-                    key="obj1"
-                    className="relative flex items-center justify-center"
-                  >
-                    <RiTruckFill className="z-10 size-5 text-gray-900" />
-                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
-                    <div className="absolute -top-4 left-8">
-                      <div className="flex gap-1">
-                        <div className="flex items-center justify-center rounded-l-full bg-red-500 p-1 text-xs ring-1 ring-gray-200">
-                          <RiCircleLine className="size-3 shrink-0 text-white" />
-                        </div>
-                        <div className="whitespace-nowrap rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-200">
-                          Drivetrain Error
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      style={{
-                        animationDelay: "1s",
-                      }}
-                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
-                    ></div>
-                  </div>,
-
-                  <div
-                    key="obj2"
-                    className="relative flex items-center justify-center"
-                  >
-                    <RiPlaneFill className="z-10 size-5 rotate-90 text-gray-900" />
-                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
-                    <div className="absolute -top-4 left-8">
-                      <div className="flex gap-1">
-                        <div className="flex items-center justify-center rounded-l-full bg-gray-500 p-1 text-xs ring-1 ring-gray-200">
-                          <RiLoaderFill className="size-3 shrink-0 animate-spin text-white" />
-                        </div>
-                        <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-200">
-                          Charging
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      style={{
-                        animationDelay: "4s",
-                      }}
-                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
-                    ></div>
-                  </div>,
-
-                  <div
-                    key="obj3"
-                    className="relative flex items-center justify-center"
-                  >
-                    <RiCarFill className="z-10 size-5 text-gray-900" />
-                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
-                    <div
-                      style={{
-                        animationDelay: "2s",
-                      }}
-                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
-                    ></div>
-                  </div>,
-                  <div
-                    key="obj4"
-                    className="relative flex items-center justify-center"
-                  >
-                    <Icons.QuadCopter className="z-10 size-5 rotate-90 text-gray-900" />
-                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
-                    <div className="absolute -top-4 left-8">
-                      <div className="flex gap-1">
-                        <div className="flex items-center justify-center rounded-l-full bg-emerald-500 p-1 text-xs ring-1 ring-gray-200">
-                          <RiCheckLine className="size-3 shrink-0 text-white" />
-                        </div>
-                        <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-200">
-                          Farming
-                        </div>
-                      </div>
-                    </div>
-
-                    <div
-                      style={{
-                        animationDelay: "6s",
-                      }}
-                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
-                    ></div>
-                  </div>,
-                  <div
-                    key="obj5"
-                    className="relative flex items-center justify-center"
-                  >
-                    <RiPlaneFill className="z-10 size-5 rotate-90 text-gray-900" />
-                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
-                    <div
-                      style={{
-                        animationDelay: "3s",
-                      }}
-                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
-                    ></div>
-                  </div>,
-                ]}
-              >
-                <div className="relative flex h-48 w-48 items-center justify-center">
-                  <div className="rounded-full p-1 ring-1 ring-black/10">
-                    <div className="relative z-10 flex size-20 items-center justify-center rounded-full bg-white shadow-[inset_0px_-15px_20px_rgba(0,0,0,0.1),0_10px_15px_0_rgba(0,0,0,0.19)] ring-1 ring-black/20">
-                      <SolarMark className="size-10" />
-                    </div>
-                    <div className="absolute inset-12 animate-[spin_8s_linear_infinite] rounded-full bg-gradient-to-t from-transparent via-orange-400 to-transparent blur-lg" />
-                  </div>
-                </div>
-              </Orbit>
-            </div>
+            <ChipViz />
           </div>
         </div>
         <div className="col-span-2 my-auto px-2">
@@ -476,7 +370,7 @@ export default function Features() {
           >
             <defs>
               <pattern
-                id="diagonal-pattern"
+                id="diagonal-feature-pattern"
                 patternUnits="userSpaceOnUse"
                 width="64"
                 height="64"
@@ -494,7 +388,11 @@ export default function Features() {
                 })}
               </pattern>
             </defs>
-            <rect width="100%" height="100%" fill="url(#diagonal-pattern)" />
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#diagonal-feature-pattern)"
+            />
           </svg>
           <div className="p-10">
             <div className="relative flex flex-col items-center justify-center">
@@ -509,7 +407,7 @@ export default function Features() {
                   >
                     <RiTruckFill className="z-10 size-5 text-gray-900" />
                     <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
-                    <div className="absolute -top-4 left-8">
+                    <div className="absolute -top-5 left-4">
                       <div className="flex gap-1">
                         <div className="flex items-center justify-center rounded-l-full bg-red-500 p-1 text-xs ring-1 ring-gray-200">
                           <RiCircleLine className="size-3 shrink-0 text-white" />
@@ -533,7 +431,7 @@ export default function Features() {
                   >
                     <RiPlaneFill className="z-10 size-5 rotate-90 text-gray-900" />
                     <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
-                    <div className="absolute -top-4 left-8">
+                    <div className="absolute -top-5 left-4">
                       <div className="flex gap-1">
                         <div className="flex items-center justify-center rounded-l-full bg-gray-500 p-1 text-xs ring-1 ring-gray-200">
                           <RiLoaderFill className="size-3 shrink-0 animate-spin text-white" />
@@ -570,7 +468,7 @@ export default function Features() {
                   >
                     <Icons.QuadCopter className="z-10 size-5 rotate-90 text-gray-900" />
                     <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
-                    <div className="absolute -top-4 left-8">
+                    <div className="absolute -top-5 left-4">
                       <div className="flex gap-1">
                         <div className="flex items-center justify-center rounded-l-full bg-emerald-500 p-1 text-xs ring-1 ring-gray-200">
                           <RiCheckLine className="size-3 shrink-0 text-white" />

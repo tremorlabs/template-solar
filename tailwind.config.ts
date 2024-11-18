@@ -72,6 +72,11 @@ const config: Config = {
             transform: "translateY(-10px)",
           },
         },
+        wave: {
+          "0%": { backgroundColor: "#4B5563" },
+          "50%": { backgroundColor: "#9CA3AF" },
+          "100%": { backgroundColor: "#4B5563" },
+        },
       },
       animation: {
         hide: "hide 150ms cubic-bezier(0.16, 1, 0.3, 1)",
@@ -97,6 +102,7 @@ const config: Config = {
         dashes: "dashes 0.8s linear infinite",
         dashesReverse: "dashes 0.8s linear infinite reverse",
         hover: "hover 4s cubic-bezier(0.45, 0, 0.55, 1) infinite",
+        wave: "wave 2s infinite ease-in-out",
       },
     },
   },
