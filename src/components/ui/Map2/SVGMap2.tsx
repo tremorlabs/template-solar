@@ -1,6 +1,9 @@
+"use client"
 import { motion } from "framer-motion"
 
-export const SVGMap2 = () => {
+import type { SVGProps } from "react"
+
+export const SVGMap2 = (props: SVGProps<SVGSVGElement>) => {
   const width = 481
   const height = 201
   return (
@@ -8,7 +11,7 @@ export const SVGMap2 = () => {
       viewBox={`0 0 ${width} ${height}`}
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="w-[50rem] shrink-0"
+      {...props}
     >
       <path
         d="M356.816 59.5522L369.836 89.5312L383.182 110.993L397.011 122.212"
@@ -538,8 +541,10 @@ export const SVGMap2 = () => {
 
       <path
         d="M94 116L47.5 95.5L60.5 88.5L73.5 80.5L86 72.5L97.5 78.5L109.5 85.5L121 91L132.5 100.5L120 104.5L107 111L94 116Z"
-        className="fill-orange-500/5"
+        fill="url(#dot-pattern)"
         strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M84 3L47.5 95.5M84 3L132.5 100.5M84 3L94 116M84 3L86 72.5M47.5 95.5L94 116M47.5 95.5L60.5 88.5L73.5 80.5L86 72.5M94 116L107 111L120 104.5L132.5 100.5M132.5 100.5L121 91L109.5 85.5L97.5 78.5L86 72.5"
@@ -551,12 +556,16 @@ export const SVGMap2 = () => {
 
       <path
         d="M290.5 175.5L262 163L275 155.5L287.5 146.5L299.5 137.5L313.5 148.5L327.5 156.5L290.5 175.5Z"
-        className="fill-orange-500/5"
+        fill="url(#dot-pattern)"
         strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M295 84L262 163M295 84L327.5 156.5M295 84L290.5 175.5M295 84L299.5 137.5M262 163L290.5 175.5M262 163L275 155.5L287.5 146.5L299.5 137.5M327.5 156.5L290.5 175.5M327.5 156.5L313.5 148.5L299.5 137.5"
         strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className="stroke-orange-400/30"
       />
 
@@ -564,22 +573,32 @@ export const SVGMap2 = () => {
         d="M182.5 20.5L235 0.5L290.5 19L270 26.5L259 23L248 27.5L227 35.5L215.5 32L204.5 36L182 28.5L193 24L182.5 20.5Z"
         className="fill-emerald-400/10 stroke-emerald-400/80"
         strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
 
       <path
         d="M157 110L133 100.5L121 91L133.5 87.5L146 80.5L158 69.5L170 70.5L182 80.5L194 75.5L205.5 70.5L217.5 66L241 74.5L230 79.5L242 84L169.5 115L157 110Z"
         className="fill-emerald-400/10 stroke-emerald-400/80"
         strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
 
+      {/* Irrigating */}
+
       <path
-        d="M121 91L133 100.5L145 105.5L170 95L182 90L170 84L158 69.5L146 80.5L133.5 87.5L121 91Z"
-        className="fill-blue-500/20"
+        d="M133 87.5L145 95L157.5 100L182.5 90L170.5 84.5L157.5 69.5L145.5 80.5L133 87.5Z"
+        fill="url(#irrigating-pattern)"
         strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
-        d="M121 91L133 100.5L145 105.5M121 91L133.5 87.5L146 80.5L158 69.5M121 91L143.5 46M158 69.5L170 84L182 90M158 69.5L143.5 46M145 105.5L170 95L182 90M145 105.5L143.5 46M182 90L143.5 46M133 100.5L121 91L133.5 87.5L146 80.5L158 69.5L170 84L182 90L170 95L145 105.5L133 100.5Z"
+        d="M133 87.5L145 95L157.5 100M133 87.5L145.5 80.5L157.5 69.5M133 87.5L152 52.5M157.5 69.5L170.5 84.5L182.5 90M157.5 69.5L152 52.5M157.5 100L182.5 90M157.5 100L152 52.5M182.5 90L152 52.5"
         strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         className="stroke-blue-400/80"
       />
 
@@ -610,7 +629,7 @@ export const SVGMap2 = () => {
       />
 
       <path
-        d="M238.5 48L216.5 57L241 65.5L170 95L194.5 104.5L169.5 115L157.5 116.5L169 119L181 117.5L195 115.5L208 122L221 134.5"
+        d="M239.5 56.5L251.5 61L263 58.5L277.5 44.5H290L302 29.5L314.5 27.5L327.5 32.5L338.5 27.5"
         stroke="url(#grad2)"
         strokeWidth="1"
         strokeLinecap="round"
@@ -619,6 +638,42 @@ export const SVGMap2 = () => {
       />
 
       <defs>
+        <pattern
+          id="irrigating-pattern"
+          patternUnits="userSpaceOnUse"
+          width="64"
+          height="64"
+        >
+          {Array.from({ length: 34 }, (_, i) => {
+            const offset = i * 4
+            return (
+              <path
+                key={i}
+                d={`M${-106 + offset} 110L${22 + offset} -18`}
+                className="stroke-blue-400/60"
+                strokeWidth="0.5"
+              />
+            )
+          })}
+        </pattern>
+        <pattern
+          id="dot-pattern"
+          patternUnits="userSpaceOnUse"
+          width="64"
+          height="64"
+        >
+          {Array.from({ length: 16 }, (_, i) =>
+            Array.from({ length: 16 }, (_, j) => (
+              <circle
+                key={`${i}-${j}`}
+                cx={i * 4 + 2}
+                cy={j * 4 + 2}
+                r="0.5"
+                className="fill-orange-400/30"
+              />
+            )),
+          )}
+        </pattern>
         <motion.linearGradient
           //   animate={{
           //     x1: [-width * 0.2, width],
