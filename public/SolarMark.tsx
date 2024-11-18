@@ -1,6 +1,6 @@
 import type { SVGProps } from "react"
 
-export const RasterMark = (props: SVGProps<SVGSVGElement>) => (
+export const SolarMark = (props: SVGProps<SVGSVGElement>) => (
   <svg
     viewBox="0 0 42 42"
     fill="none"

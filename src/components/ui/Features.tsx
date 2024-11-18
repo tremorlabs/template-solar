@@ -1,140 +1,172 @@
 import {
   RiCarFill,
+  RiCheckLine,
   RiCircleLine,
   RiLoaderFill,
   RiPlaneFill,
   RiTruckFill,
 } from "@remixicon/react"
-import { RasterMark } from "../../../public/SolarMark"
+import { SolarMark } from "../../../public/SolarMark"
 import { Icons } from "../Icons"
 import { Orbit } from "../Orbit"
 
 export default function Features() {
   return (
-    <div className="relative mx-auto h-[95rem] w-full max-w-6xl">
-      {/* Grid */}
-      <div className="pointer-events-none absolute inset-0 flex h-full items-center justify-center">
-        <div className="mx-px grid h-full w-full grid-cols-4">
-          <div
-            className="border-l border-dashed border-gray-300"
-            style={{
-              maskImage:
-                "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
-            }}
-          ></div>
-          <div
-            style={{
-              maskImage:
-                "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
-            }}
-            className="border-x border-dashed border-gray-300"
-          ></div>
-          <div
-            style={{
-              maskImage:
-                "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
-            }}
-            className="border-r border-dashed border-gray-300"
-          ></div>
-          <div
-            style={{
-              maskImage:
-                "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
-            }}
-            className="border-r border-dashed border-gray-300"
-          ></div>
+    <div className="relative mx-auto max-w-6xl">
+      {/* Vertical Lines */}
+      <div className="pointer-events-none inset-0">
+        {/* Left */}
+        <div
+          className="absolute inset-y-0 my-[-5rem] w-px"
+          style={{
+            maskImage:
+              "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
+          }}
+        >
+          <svg className="h-full w-full" preserveAspectRatio="none">
+            <line
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="100%"
+              className="stroke-gray-300"
+              strokeWidth="2"
+              strokeDasharray="3 3"
+            />
+          </svg>
+        </div>
+
+        {/* Right */}
+        <div
+          className="absolute inset-y-0 right-0 my-[-5rem] w-px"
+          style={{
+            maskImage:
+              "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
+          }}
+        >
+          <svg className="h-full w-full" preserveAspectRatio="none">
+            <line
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="100%"
+              className="stroke-gray-300"
+              strokeWidth="2"
+              strokeDasharray="3 3"
+            />
+          </svg>
+        </div>
+        {/* Middle */}
+        <div
+          className="absolute inset-y-0 left-1/2 -z-10 my-[-5rem] w-px"
+          style={{
+            maskImage:
+              "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
+          }}
+        >
+          <svg className="h-full w-full" preserveAspectRatio="none">
+            <line
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="100%"
+              className="stroke-gray-300"
+              strokeWidth="2"
+              strokeDasharray="3 3"
+            />
+          </svg>
+        </div>
+        {/* 25% */}
+        <div
+          className="absolute inset-y-0 left-1/4 -z-10 my-[-5rem] hidden w-px sm:block"
+          style={{
+            maskImage:
+              "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
+          }}
+        >
+          <svg className="h-full w-full" preserveAspectRatio="none">
+            <line
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="100%"
+              className="stroke-gray-300"
+              strokeWidth="2"
+              strokeDasharray="3 3"
+            />
+          </svg>
+        </div>
+        {/* 75% */}
+        <div
+          className="absolute inset-y-0 left-3/4 -z-10 my-[-5rem] hidden w-px sm:block"
+          style={{
+            maskImage:
+              "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
+          }}
+        >
+          <svg className="h-full w-full" preserveAspectRatio="none">
+            <line
+              x1="0"
+              y1="0"
+              x2="0"
+              y2="100%"
+              className="stroke-gray-300"
+              strokeWidth="2"
+              strokeDasharray="3 3"
+            />
+          </svg>
         </div>
       </div>
-      <div className="absolute inset-0 flex h-full items-center justify-center">
-        <div className="grid h-full w-full grid-cols-4 grid-rows-3">
-          <div className="col-span-2 m-2 mt-20">
-            <div>
-              <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
-                Smart Farming Solutions
-                <div className="absolute -left-[7px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
-              </h2>
-              <p className="mt-2 text-balance text-5xl font-semibold tracking-tighter text-gray-900">
-                A network of autonomous systems for complete farm monitoring
-              </p>
-              <p className="mt-4 text-balance text-gray-700">
-                Deploy intelligent monitoring and automated response systems
-                across your fields, irrigation networks, and aerial operations
-                with our integrated platform. Use our autonomous systems for
-                comprehensive crop management, with processing happening locally
-                at each sensor point for maximum efficiency and reliability.
-              </p>
-            </div>
-            <div className="mt-48">
-              <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
-                Field Intelligence
-                <div className="absolute -left-[7px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
-              </h2>
-              <p className="mt-2 text-balance text-5xl font-semibold tracking-tighter text-gray-900">
-                Real-time insights with distributed farm AI
-              </p>
-              <p className="mt-4 text-balance text-gray-700">
-                Process agricultural data instantly where it&apos;s collected,
-                enabling immediate decision-making without internet
-                dependencies. Our advanced AI runs efficiently on field sensors,
-                delivering actionable insights while maintaining data privacy
-                and minimizing connectivity requirements.
-              </p>
-            </div>
-            <div className="mt-48">
-              <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
-                Easy Expansion
-                <div className="absolute -left-[7px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
-              </h2>
-              <p className="mt-2 text-balance text-5xl font-semibold tracking-tighter text-gray-900">
-                Scale your smart farm with plug-and-play simplicity
-              </p>
-              <p className="mt-4 text-balance text-gray-700">
-                Add new sensors and capabilities to your farm network with zero
-                setup required. Our systems automatically connect and coordinate
-                with each other, creating a robust agricultural network that
-                grows stronger with each additional sensor while maintaining
-                enterprise-grade security.
-              </p>
-            </div>
-          </div>
-
-          <div className="relative col-span-2 row-span-3">
-            <div className="absolute inset-0">
-              <svg
-                className="size-full h-full"
-                style={{
-                  maskImage:
-                    "linear-gradient(transparent, white 20rem, white calc(100% - 20rem), transparent)",
-                }}
+      <div className="grid grid-cols-1 gap-12 md:grid-cols-4 md:gap-0">
+        {/* Content */}
+        <div className="col-span-2 my-auto px-2">
+          <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
+            Smart Farming Solutions
+            <div className="absolute -left-[8px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
+          </h2>
+          <p className="mt-2 text-balance text-3xl font-semibold tracking-tighter text-gray-900 md:text-5xl">
+            A network of autonomous systems for complete farm monitoring
+          </p>
+          <p className="mt-4 text-balance text-gray-700">
+            Deploy intelligent monitoring and automated response systems across
+            your fields, irrigation networks, and aerial operations with our
+            integrated platform. Use our autonomous systems for comprehensive
+            crop management, with processing happening locally at each sensor
+            point for maximum efficiency and reliability.
+          </p>
+        </div>
+        <div className="relative col-span-2 flex items-center justify-center overflow-hidden">
+          <svg
+            className="absolute size-full [mask-image:linear-gradient(transparent,white_10rem)]"
+            // style={{
+            //   maskImage:
+            //     "linear-gradient(transparent, white 20rem, white calc(100% - 20rem), transparent)",
+            // }}
+          >
+            <defs>
+              <pattern
+                id="diagonal-pattern"
+                patternUnits="userSpaceOnUse"
+                width="64"
+                height="64"
               >
-                <defs>
-                  <pattern
-                    id="diagonal-pattern"
-                    patternUnits="userSpaceOnUse"
-                    width="64"
-                    height="64"
-                  >
-                    {Array.from({ length: 17 }, (_, i) => {
-                      const offset = i * 8
-                      return (
-                        <path
-                          key={i}
-                          d={`M${-106 + offset} 110L${22 + offset} -18`}
-                          className="stroke-gray-200/70"
-                          strokeWidth="1"
-                        />
-                      )
-                    })}
-                  </pattern>
-                </defs>
-                <rect
-                  width="100%"
-                  height="100%"
-                  fill="url(#diagonal-pattern)"
-                />
-              </svg>
-            </div>
-            <div className="relative -ml-0.5 mt-20 flex flex-col items-center justify-center">
+                {Array.from({ length: 17 }, (_, i) => {
+                  const offset = i * 8
+                  return (
+                    <path
+                      key={i}
+                      d={`M${-106 + offset} 110L${22 + offset} -18`}
+                      className="stroke-gray-200/70"
+                      strokeWidth="1"
+                    />
+                  )
+                })}
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#diagonal-pattern)" />
+          </svg>
+          <div className="p-10">
+            <div className="relative flex flex-col items-center justify-center">
               <Orbit
                 durationSeconds={40}
                 radiusPx={160}
@@ -205,12 +237,12 @@ export default function Features() {
                     key="obj4"
                     className="relative flex items-center justify-center"
                   >
-                    <RiPlaneFill className="z-10 size-5 rotate-90 text-gray-900" />
+                    <Icons.QuadCopter className="z-10 size-5 rotate-90 text-gray-900" />
                     <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
                     <div className="absolute -top-4 left-8">
                       <div className="flex gap-1">
                         <div className="flex items-center justify-center rounded-l-full bg-emerald-500 p-1 text-xs ring-1 ring-gray-200">
-                          <Icons.QuadCopter className="size-3 shrink-0 text-white" />
+                          <RiCheckLine className="size-3 shrink-0 text-white" />
                         </div>
                         <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-200">
                           Farming
@@ -243,86 +275,343 @@ export default function Features() {
                 <div className="relative flex h-48 w-48 items-center justify-center">
                   <div className="rounded-full p-1 ring-1 ring-black/10">
                     <div className="relative z-10 flex size-20 items-center justify-center rounded-full bg-white shadow-[inset_0px_-15px_20px_rgba(0,0,0,0.1),0_10px_15px_0_rgba(0,0,0,0.19)] ring-1 ring-black/20">
-                      <RasterMark className="size-10" />
+                      <SolarMark className="size-10" />
                     </div>
                     <div className="absolute inset-12 animate-[spin_8s_linear_infinite] rounded-full bg-gradient-to-t from-transparent via-orange-400 to-transparent blur-lg" />
                   </div>
                 </div>
               </Orbit>
             </div>
-            <div className="relative mt-40 flex flex-col items-center justify-center">
-              <div className="mx-auto w-fit border border-dashed bg-white">
-                Base Station
-              </div>
+          </div>
+        </div>
 
-              <svg
-                viewBox="0 0 136 77"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-[350px]"
+        <div className="col-span-2 my-auto px-2">
+          <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
+            Field Intelligence
+            <div className="absolute -left-[8px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
+          </h2>
+          <p className="mt-2 text-balance text-3xl font-semibold tracking-tighter text-gray-900 md:text-5xl">
+            Real-time insights with distributed farm AI
+          </p>
+          <p className="mt-4 text-balance text-gray-700">
+            Process agricultural data instantly where it&apos;s collected,
+            enabling immediate decision-making without internet dependencies.
+            Our advanced AI runs efficiently on field sensors, delivering
+            actionable insights while maintaining data privacy and minimizing
+            connectivity requirements.
+          </p>
+        </div>
+        <div className="relative col-span-2 flex items-center justify-center overflow-hidden">
+          <svg
+            className="absolute size-full"
+            // style={{
+            //   maskImage:
+            //     "linear-gradient(transparent, white 20rem, white calc(100% - 20rem), transparent)",
+            // }}
+          >
+            <defs>
+              <pattern
+                id="diagonal-pattern"
+                patternUnits="userSpaceOnUse"
+                width="64"
+                height="64"
               >
-                <path
-                  d="M90.0003 77C90.0003 47.288 72.2553 41.0564 72.0005 17.5761L72.0003 -2.81494e-05"
-                  stroke="url(#paint0_linear_11560_66)"
-                  strokeWidth="1"
-                  strokeLinecap="square"
-                  strokeDasharray="2 5"
-                  className="animate-dashes"
-                />
-                <path
-                  d="M46.0671 77C46.0671 47.288 63.8121 41.0564 64.0669 17.5761L64.0671 -2.81494e-05"
-                  stroke="url(#paint0_linear_11560_66)"
-                  strokeWidth="1"
-                  strokeLinecap="square"
-                  strokeDasharray="2 5"
-                  className="animate-dashes"
-                />
-                <path
-                  d="M135 77L135 73.1118C135 63.9272 129.545 55.3433 120.445 50.2095L99.5548 38.4238C90.4552 33.2901 80 24.7062 80 15.5215L80 7.39098e-06"
-                  stroke="url(#paint0_linear_11560_66)"
-                  strokeWidth="1"
-                  strokeLinecap="square"
-                  strokeDasharray="2 5"
-                  className="animate-dashesReverse"
-                />
-                <path
-                  d="M1 77L1 73.1118C0.999999 63.9272 6.455 55.3433 15.555 50.2095L36.4452 38.4238C45.5448 33.2901 56 24.7062 56 15.5215L56 4.98685e-06"
-                  stroke="url(#paint0_linear_11560_66)"
-                  strokeWidth="1"
-                  strokeLinecap="square"
-                  strokeDasharray="2 5"
-                  className="animate-dashesReverse"
-                />
-
-                <defs>
-                  <linearGradient
-                    id="paint0_linear_11560_66"
-                    x1="101.122"
-                    y1="204.455"
-                    x2="101.122"
-                    y2="0"
-                    gradientUnits="userSpaceOnUse"
+                {Array.from({ length: 17 }, (_, i) => {
+                  const offset = i * 8
+                  return (
+                    <path
+                      key={i}
+                      d={`M${-106 + offset} 110L${22 + offset} -18`}
+                      className="stroke-gray-200/70"
+                      strokeWidth="1"
+                    />
+                  )
+                })}
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#diagonal-pattern)" />
+          </svg>
+          <div className="p-10">
+            <div className="relative flex flex-col items-center justify-center">
+              <Orbit
+                durationSeconds={40}
+                radiusPx={160}
+                keepUpright
+                orbitingObjects={[
+                  <div
+                    key="obj1"
+                    className="relative flex items-center justify-center"
                   >
-                    <stop stopColor="#131313" />
-                    <stop offset="1" stopColor="#F97316" />
-                  </linearGradient>
-                </defs>
-              </svg>
+                    <RiTruckFill className="z-10 size-5 text-gray-900" />
+                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                    <div className="absolute -top-4 left-8">
+                      <div className="flex gap-1">
+                        <div className="flex items-center justify-center rounded-l-full bg-red-500 p-1 text-xs ring-1 ring-gray-200">
+                          <RiCircleLine className="size-3 shrink-0 text-white" />
+                        </div>
+                        <div className="whitespace-nowrap rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-200">
+                          Drivetrain Error
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        animationDelay: "1s",
+                      }}
+                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                    ></div>
+                  </div>,
 
-              <div className="flex gap-[65px]">
-                <div className="flex items-center justify-center rounded-sm border bg-white p-2">
-                  <RiPlaneFill className="size-8 text-gray-900" />
+                  <div
+                    key="obj2"
+                    className="relative flex items-center justify-center"
+                  >
+                    <RiPlaneFill className="z-10 size-5 rotate-90 text-gray-900" />
+                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                    <div className="absolute -top-4 left-8">
+                      <div className="flex gap-1">
+                        <div className="flex items-center justify-center rounded-l-full bg-gray-500 p-1 text-xs ring-1 ring-gray-200">
+                          <RiLoaderFill className="size-3 shrink-0 animate-spin text-white" />
+                        </div>
+                        <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-200">
+                          Charging
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        animationDelay: "4s",
+                      }}
+                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                    ></div>
+                  </div>,
+
+                  <div
+                    key="obj3"
+                    className="relative flex items-center justify-center"
+                  >
+                    <RiCarFill className="z-10 size-5 text-gray-900" />
+                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                    <div
+                      style={{
+                        animationDelay: "2s",
+                      }}
+                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                    ></div>
+                  </div>,
+                  <div
+                    key="obj4"
+                    className="relative flex items-center justify-center"
+                  >
+                    <Icons.QuadCopter className="z-10 size-5 rotate-90 text-gray-900" />
+                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                    <div className="absolute -top-4 left-8">
+                      <div className="flex gap-1">
+                        <div className="flex items-center justify-center rounded-l-full bg-emerald-500 p-1 text-xs ring-1 ring-gray-200">
+                          <RiCheckLine className="size-3 shrink-0 text-white" />
+                        </div>
+                        <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-200">
+                          Farming
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      style={{
+                        animationDelay: "6s",
+                      }}
+                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                    ></div>
+                  </div>,
+                  <div
+                    key="obj5"
+                    className="relative flex items-center justify-center"
+                  >
+                    <RiPlaneFill className="z-10 size-5 rotate-90 text-gray-900" />
+                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                    <div
+                      style={{
+                        animationDelay: "3s",
+                      }}
+                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                    ></div>
+                  </div>,
+                ]}
+              >
+                <div className="relative flex h-48 w-48 items-center justify-center">
+                  <div className="rounded-full p-1 ring-1 ring-black/10">
+                    <div className="relative z-10 flex size-20 items-center justify-center rounded-full bg-white shadow-[inset_0px_-15px_20px_rgba(0,0,0,0.1),0_10px_15px_0_rgba(0,0,0,0.19)] ring-1 ring-black/20">
+                      <SolarMark className="size-10" />
+                    </div>
+                    <div className="absolute inset-12 animate-[spin_8s_linear_infinite] rounded-full bg-gradient-to-t from-transparent via-orange-400 to-transparent blur-lg" />
+                  </div>
                 </div>
-                <div className="flex items-center justify-center rounded-sm border bg-white p-2">
-                  <RiPlaneFill className="size-8 text-gray-900" />
+              </Orbit>
+            </div>
+          </div>
+        </div>
+        <div className="col-span-2 my-auto px-2">
+          <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
+            Easy Expansion
+            <div className="absolute -left-[7px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
+          </h2>
+          <p className="mt-2 text-balance text-3xl font-semibold tracking-tighter text-gray-900 md:text-5xl">
+            Scale your smart farm with plug-and-play simplicity
+          </p>
+          <p className="mt-4 text-balance text-gray-700">
+            Add new sensors and capabilities to your farm network with zero
+            setup required. Our systems automatically connect and coordinate
+            with each other, creating a robust agricultural network that grows
+            stronger with each additional sensor while maintaining
+            enterprise-grade security.
+          </p>
+        </div>
+        <div className="relative col-span-2 flex items-center justify-center overflow-hidden">
+          <svg
+            className="absolute size-full [mask-image:linear-gradient(white_10rem,transparent)]"
+            // style={{
+            //   maskImage:
+            //     "linear-gradient(transparent, white 20rem, white calc(100% - 20rem), transparent)",
+            // }}
+          >
+            <defs>
+              <pattern
+                id="diagonal-pattern"
+                patternUnits="userSpaceOnUse"
+                width="64"
+                height="64"
+              >
+                {Array.from({ length: 17 }, (_, i) => {
+                  const offset = i * 8
+                  return (
+                    <path
+                      key={i}
+                      d={`M${-106 + offset} 110L${22 + offset} -18`}
+                      className="stroke-gray-200/70"
+                      strokeWidth="1"
+                    />
+                  )
+                })}
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#diagonal-pattern)" />
+          </svg>
+          <div className="p-10">
+            <div className="relative flex flex-col items-center justify-center">
+              <Orbit
+                durationSeconds={40}
+                radiusPx={160}
+                keepUpright
+                orbitingObjects={[
+                  <div
+                    key="obj1"
+                    className="relative flex items-center justify-center"
+                  >
+                    <RiTruckFill className="z-10 size-5 text-gray-900" />
+                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                    <div className="absolute -top-4 left-8">
+                      <div className="flex gap-1">
+                        <div className="flex items-center justify-center rounded-l-full bg-red-500 p-1 text-xs ring-1 ring-gray-200">
+                          <RiCircleLine className="size-3 shrink-0 text-white" />
+                        </div>
+                        <div className="whitespace-nowrap rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-200">
+                          Drivetrain Error
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        animationDelay: "1s",
+                      }}
+                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                    ></div>
+                  </div>,
+
+                  <div
+                    key="obj2"
+                    className="relative flex items-center justify-center"
+                  >
+                    <RiPlaneFill className="z-10 size-5 rotate-90 text-gray-900" />
+                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                    <div className="absolute -top-4 left-8">
+                      <div className="flex gap-1">
+                        <div className="flex items-center justify-center rounded-l-full bg-gray-500 p-1 text-xs ring-1 ring-gray-200">
+                          <RiLoaderFill className="size-3 shrink-0 animate-spin text-white" />
+                        </div>
+                        <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-200">
+                          Charging
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        animationDelay: "4s",
+                      }}
+                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                    ></div>
+                  </div>,
+
+                  <div
+                    key="obj3"
+                    className="relative flex items-center justify-center"
+                  >
+                    <RiCarFill className="z-10 size-5 text-gray-900" />
+                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                    <div
+                      style={{
+                        animationDelay: "2s",
+                      }}
+                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                    ></div>
+                  </div>,
+                  <div
+                    key="obj4"
+                    className="relative flex items-center justify-center"
+                  >
+                    <Icons.QuadCopter className="z-10 size-5 rotate-90 text-gray-900" />
+                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                    <div className="absolute -top-4 left-8">
+                      <div className="flex gap-1">
+                        <div className="flex items-center justify-center rounded-l-full bg-emerald-500 p-1 text-xs ring-1 ring-gray-200">
+                          <RiCheckLine className="size-3 shrink-0 text-white" />
+                        </div>
+                        <div className="rounded-r-full bg-white/50 py-0.5 pl-1 pr-1.5 text-xs ring-1 ring-gray-200">
+                          Farming
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      style={{
+                        animationDelay: "6s",
+                      }}
+                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                    ></div>
+                  </div>,
+                  <div
+                    key="obj5"
+                    className="relative flex items-center justify-center"
+                  >
+                    <RiPlaneFill className="z-10 size-5 rotate-90 text-gray-900" />
+                    <div className="absolute size-10 rounded-full bg-white/50 shadow-lg ring-1 ring-black/5"></div>
+                    <div
+                      style={{
+                        animationDelay: "3s",
+                      }}
+                      className="absolute size-10 animate-[ping_7s_ease_infinite] rounded-full ring-1 ring-orange-500/50"
+                    ></div>
+                  </div>,
+                ]}
+              >
+                <div className="relative flex h-48 w-48 items-center justify-center">
+                  <div className="rounded-full p-1 ring-1 ring-black/10">
+                    <div className="relative z-10 flex size-20 items-center justify-center rounded-full bg-white shadow-[inset_0px_-15px_20px_rgba(0,0,0,0.1),0_10px_15px_0_rgba(0,0,0,0.19)] ring-1 ring-black/20">
+                      <SolarMark className="size-10" />
+                    </div>
+                    <div className="absolute inset-12 animate-[spin_8s_linear_infinite] rounded-full bg-gradient-to-t from-transparent via-orange-400 to-transparent blur-lg" />
+                  </div>
                 </div>
-                <div className="flex items-center justify-center rounded-sm border bg-white p-2">
-                  <RiPlaneFill className="size-8 text-gray-900" />
-                </div>
-                <div className="flex items-center justify-center rounded-sm border bg-white p-2">
-                  <RiPlaneFill className="size-8 text-gray-900" />
-                </div>
-              </div>
+              </Orbit>
             </div>
           </div>
         </div>
