@@ -1,5 +1,4 @@
 import AnimatedDivider from "@/components/ui/AnimatedDivider"
-import ChipViz from "@/components/ui/ChipViz"
 import Features from "@/components/ui/Features"
 import { Hero } from "@/components/ui/Hero"
 import { Map } from "@/components/ui/Map/Map"
@@ -17,7 +16,6 @@ export default function Home() {
       <div className="mt-32 px-2 xl:px-0">
         <Testimonial />
       </div>
-
       <div>
         <AnimatedDivider />
       </div>
