@@ -9,7 +9,6 @@ import {
 import { SolarMark } from "../../../public/SolarMark"
 import { Icons } from "../Icons"
 import { Orbit } from "../Orbit"
-import ChipViz from "./ChipViz"
 
 export default function Features() {
   return (
@@ -341,7 +340,8 @@ export default function Features() {
             />
           </svg>
           <div className="p-10">
-            <ChipViz />
+            {/* <ChipViz /> */}
+            <div>content</div>
           </div>
         </div>
         <div className="col-span-2 my-auto px-2">
