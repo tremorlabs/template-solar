@@ -105,7 +105,7 @@ const Footer = () => {
           </div>
         </div>
         <svg
-          className="mb-6 h-20 w-full border-y border-dashed border-gray-300 stroke-gray-300"
+          className="mb-10 h-20 w-full border-y border-dashed border-gray-300 stroke-gray-300"
           // style={{
           //   maskImage:
           //     "linear-gradient(transparent, white 10rem, white calc(100% - 10rem), transparent)",

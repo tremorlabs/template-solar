@@ -2,7 +2,11 @@ import {
   RiCarFill,
   RiCheckLine,
   RiCircleLine,
+  RiCodepenLine,
+  RiContrast2Line,
+  RiCopilotFill,
   RiLoaderFill,
+  RiNotification2Line,
   RiPlaneFill,
   RiTruckFill,
 } from "@remixicon/react"
@@ -15,7 +19,7 @@ export default function Features() {
   return (
     <div className="relative mx-auto max-w-6xl">
       {/* Vertical Lines */}
-      <div className="pointer-events-none inset-0">
+      <div className="pointer-events-none inset-0 select-none">
         {/* Left */}
         <div
           className="absolute inset-y-0 my-[-5rem] w-px"
@@ -170,7 +174,7 @@ export default function Features() {
               fill="url(#diagonal-feature-pattern)"
             />
           </svg>
-          <div className="p-10">
+          <div className="pointer-events-none h-96 select-none p-10">
             <div className="relative flex flex-col items-center justify-center">
               <Orbit
                 durationSeconds={40}
@@ -279,7 +283,7 @@ export default function Features() {
               >
                 <div className="relative flex h-48 w-48 items-center justify-center">
                   <div className="rounded-full p-1 ring-1 ring-black/10">
-                    <div className="relative z-10 flex size-20 items-center justify-center rounded-full bg-white shadow-[inset_0px_-15px_20px_rgba(0,0,0,0.1),0_10px_15px_0_rgba(0,0,0,0.19)] ring-1 ring-black/20">
+                    <div className="relative z-10 flex size-20 items-center justify-center rounded-full bg-white shadow-[inset_0px_-15px_20px_rgba(0,0,0,0.1),0_7px_10px_0_rgba(0,0,0,0.15)] ring-1 ring-black/20">
                       <SolarMark className="size-10" />
                     </div>
                     <div className="absolute inset-12 animate-[spin_8s_linear_infinite] rounded-full bg-gradient-to-t from-transparent via-orange-400 to-transparent blur-lg" />
@@ -291,20 +295,22 @@ export default function Features() {
         </div>
 
         <div className="col-span-2 my-auto px-2">
-          <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
-            Field Intelligence
-            <div className="absolute -left-[8px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
-          </h2>
-          <p className="mt-2 text-balance text-3xl font-semibold tracking-tighter text-gray-900 md:text-5xl">
-            Real-time insights with distributed farm AI
-          </p>
-          <p className="mt-4 text-balance text-gray-700">
-            Process agricultural data instantly where it&apos;s collected,
-            enabling immediate decision-making without internet dependencies.
-            Our advanced AI runs efficiently on field sensors, delivering
-            actionable insights while maintaining data privacy and minimizing
-            connectivity requirements.
-          </p>
+          <div className="mx-auto max-w-6xl px-4 py-16">
+            <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
+              Smart Agriculture
+              <div className="absolute -left-[8px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
+            </h2>
+            <p className="mt-2 text-balance text-3xl font-semibold tracking-tighter text-gray-900 md:text-5xl">
+              Turn every acre into a data-driven powerhouse
+            </p>
+            <p className="mt-4 text-balance text-gray-700">
+              Revolutionize your farming operation with edge-computing AI that
+              transforms raw field data into actionable insights in real-time.
+              Make informed decisions faster, reduce resource waste, and
+              maximize yields with autonomous technology that works as hard as
+              you do—even offline.
+            </p>
+          </div>
         </div>
         <div className="relative col-span-2 flex items-center justify-center overflow-hidden">
           <svg
@@ -340,8 +346,8 @@ export default function Features() {
               fill="url(#diagonal-feature-pattern)"
             />
           </svg>
-          <div className="p-10">
-            <ChipViz />
+          <div className="pointer-events-none h-96 select-none p-10">
+            Content
           </div>
         </div>
         <div className="col-span-2 my-auto px-2">
@@ -394,7 +400,105 @@ export default function Features() {
               fill="url(#diagonal-feature-pattern)"
             />
           </svg>
-          <div className="p-10">content</div>
+          <div className="pointer-events-none relative flex size-full h-96 select-none items-center justify-center p-10">
+            <div className="relative">
+              <div className="absolute left-[6rem] top-[6rem] z-20">
+                <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 shadow-md shadow-black/10 ring-1 ring-black/10">
+                  <div className="absolute left-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute right-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute bottom-[15%] left-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute bottom-[15%] right-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute right-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute left-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute left-1/2 top-[2%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute bottom-[2%] left-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="w-fit rounded-full bg-gradient-to-b from-white to-gray-100 p-3 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.09),0_3px_5px_0_rgba(0,0,0,0.19)] ring-1 ring-inset ring-white/50">
+                    <RiNotification2Line
+                      className="size-5 text-gray-900"
+                      aria-hidden="true"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="absolute right-[6rem] top-[6rem] z-20">
+                <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 shadow-md shadow-black/10 ring-1 ring-black/10">
+                  <div className="absolute left-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute right-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute bottom-[15%] left-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute bottom-[15%] right-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute right-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute left-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute left-1/2 top-[2%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute bottom-[2%] left-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="w-fit rounded-full bg-gradient-to-b from-white to-gray-100 p-3 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.05),0_7px_10px_0_rgba(0,0,0,0.10)] ring-1 ring-inset ring-white/50">
+                    <RiContrast2Line
+                      className="size-5 text-gray-900"
+                      aria-hidden="true"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="absolute bottom-[6rem] right-[6rem] z-20">
+                <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 shadow-md shadow-black/10 ring-1 ring-black/10">
+                  <div className="absolute left-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute right-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute bottom-[15%] left-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute bottom-[15%] right-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute right-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute left-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute left-1/2 top-[2%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute bottom-[2%] left-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="w-fit rounded-full bg-gradient-to-b from-white to-gray-100 p-3 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.05),0_7px_10px_0_rgba(0,0,0,0.10)] ring-1 ring-inset ring-white/50">
+                    <RiCodepenLine
+                      className="size-5 text-gray-900"
+                      aria-hidden="true"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="absolute bottom-[6rem] left-[6rem] z-20">
+                <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 shadow-md shadow-black/10 ring-1 ring-black/10">
+                  <div className="absolute left-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute right-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute bottom-[15%] left-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute bottom-[15%] right-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute right-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute left-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute left-1/2 top-[2%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="absolute bottom-[2%] left-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
+                  <div className="w-fit rounded-full bg-gradient-to-b from-white to-gray-100 p-3 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.05),0_7px_10px_0_rgba(0,0,0,0.10)] ring-1 ring-inset ring-white/50">
+                    <RiCopilotFill
+                      className="size-5 text-gray-900"
+                      aria-hidden="true"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative">
+              {[0, 45, 135, 180, 225, 315, 360].map((rotation, index) => (
+                <div
+                  key={rotation}
+                  className="absolute origin-left overflow-hidden"
+                  style={{ transform: `rotate(${rotation}deg)` }}
+                >
+                  <div className="relative">
+                    <div className="h-0.5 w-60 bg-gradient-to-r from-gray-300 to-transparent" />
+                    <div
+                      className="absolute left-0 top-0 h-0.5 w-28 bg-gradient-to-r from-transparent via-orange-300 to-transparent"
+                      style={{
+                        animation: `gridMovingLine 5s linear infinite ${index * 1.2}s`,
+                        animationFillMode: "backwards",
+                      }}
+                    />
+                  </div>
+                </div>
+              ))}
+              <div className="absolute -translate-x-1/2 -translate-y-1/2">
+                <ChipViz />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
