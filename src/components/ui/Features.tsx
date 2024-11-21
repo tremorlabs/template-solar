@@ -1,3 +1,4 @@
+import { cx } from "@/lib/utils"
 import {
   RiCarFill,
   RiCheckLine,
@@ -129,15 +130,13 @@ export default function Features() {
             Smart Farming Solutions
             <div className="absolute -left-[8px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
           </h2>
-          <p className="mt-2 text-balance text-3xl font-semibold tracking-tighter text-gray-900 md:text-5xl">
+          <p className="mt-2 text-balance text-3xl font-semibold tracking-tighter text-gray-900 md:text-4xl">
             A network of autonomous systems for complete farm monitoring
           </p>
           <p className="mt-4 text-balance text-gray-700">
             Deploy intelligent monitoring and automated response systems across
             your fields, irrigation networks, and aerial operations with our
-            integrated platform. Use our autonomous systems for comprehensive
-            crop management, with processing happening locally at each sensor
-            point for maximum efficiency and reliability.
+            integrated platform.
           </p>
         </div>
         <div className="relative col-span-2 flex items-center justify-center overflow-hidden">
@@ -295,22 +294,19 @@ export default function Features() {
         </div>
 
         <div className="col-span-2 my-auto px-2">
-          <div className="mx-auto max-w-6xl px-4 py-16">
-            <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
-              Smart Agriculture
-              <div className="absolute -left-[8px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
-            </h2>
-            <p className="mt-2 text-balance text-3xl font-semibold tracking-tighter text-gray-900 md:text-5xl">
-              Turn every acre into a data-driven powerhouse
-            </p>
-            <p className="mt-4 text-balance text-gray-700">
-              Revolutionize your farming operation with edge-computing AI that
-              transforms raw field data into actionable insights in real-time.
-              Make informed decisions faster, reduce resource waste, and
-              maximize yields with autonomous technology that works as hard as
-              you do—even offline.
-            </p>
-          </div>
+          <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
+            Precision Agriculture
+            <div className="absolute -left-[8px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
+          </h2>
+          <p className="mt-2 text-balance text-3xl font-semibold tracking-tighter text-gray-900 md:text-4xl">
+            Turn every acre into a data-driven powerhouse
+          </p>
+          <p className="mt-4 text-balance text-gray-700">
+            Revolutionize your farming operation with edge-computing AI that
+            transforms raw field data into actionable insights in real-time.
+            Make informed decisions faster, reduce resource waste, and maximize
+            yields.
+          </p>
         </div>
         <div className="relative col-span-2 flex items-center justify-center overflow-hidden">
           <svg
@@ -346,8 +342,37 @@ export default function Features() {
               fill="url(#diagonal-feature-pattern)"
             />
           </svg>
-          <div className="pointer-events-none h-96 select-none p-10">
-            Content
+          <div className="relative h-[440px] w-[440px]">
+            <div className="grid h-[440px] w-[440px] grid-cols-9 [mask-image:radial-gradient(white_0%,transparent_60%)]">
+              {Array(81)
+                .fill(null)
+                .map((_, index) => {
+                  const isLastRow = index >= 72
+                  const isLastCol = (index + 1) % 9 === 0
+                  const isCenter = index === 40
+
+                  return (
+                    <div
+                      key={index}
+                      className={cx(
+                        "h-12 w-12 border-l border-t border-gray-300",
+                        isLastRow ? "border-b" : "",
+                        isLastCol ? "border-r" : "",
+                      )}
+                    >
+                      {isCenter && (
+                        <div className="relative flex size-12 items-center justify-center">
+                          <div>
+                            <div className="relative z-10 flex h-12 w-12 items-center justify-center bg-white shadow-[inset_0px_-5px_10px_rgba(0,0,0,0.1),0_7px_10px_0_rgba(0,0,0,0.15)] ring-1 ring-black/15">
+                              <SolarMark className="size-8" />
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  )
+                })}
+            </div>
           </div>
         </div>
         <div className="col-span-2 my-auto px-2">
@@ -355,15 +380,13 @@ export default function Features() {
             Easy Expansion
             <div className="absolute -left-[7px] top-1 h-5 w-[3px] rounded-r-sm bg-orange-500" />
           </h2>
-          <p className="mt-2 text-balance text-3xl font-semibold tracking-tighter text-gray-900 md:text-5xl">
+          <p className="mt-2 text-balance text-3xl font-semibold tracking-tighter text-gray-900 md:text-4xl">
             Scale your smart farm with plug-and-play simplicity
           </p>
           <p className="mt-4 text-balance text-gray-700">
             Add new sensors and capabilities to your farm network with zero
             setup required. Our systems automatically connect and coordinate
-            with each other, creating a robust agricultural network that grows
-            stronger with each additional sensor while maintaining
-            enterprise-grade security.
+            with each other.
           </p>
         </div>
         <div className="relative col-span-2 flex items-center justify-center overflow-hidden">
@@ -404,14 +427,6 @@ export default function Features() {
             <div className="relative">
               <div className="absolute left-[6rem] top-[6rem] z-20">
                 <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 shadow-md shadow-black/10 ring-1 ring-black/10">
-                  <div className="absolute left-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute right-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute bottom-[15%] left-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute bottom-[15%] right-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute right-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute left-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute left-1/2 top-[2%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute bottom-[2%] left-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
                   <div className="w-fit rounded-full bg-gradient-to-b from-white to-gray-100 p-3 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.09),0_3px_5px_0_rgba(0,0,0,0.19)] ring-1 ring-inset ring-white/50">
                     <RiNotification2Line
                       className="size-5 text-gray-900"
@@ -422,14 +437,6 @@ export default function Features() {
               </div>
               <div className="absolute right-[6rem] top-[6rem] z-20">
                 <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 shadow-md shadow-black/10 ring-1 ring-black/10">
-                  <div className="absolute left-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute right-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute bottom-[15%] left-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute bottom-[15%] right-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute right-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute left-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute left-1/2 top-[2%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute bottom-[2%] left-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
                   <div className="w-fit rounded-full bg-gradient-to-b from-white to-gray-100 p-3 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.05),0_7px_10px_0_rgba(0,0,0,0.10)] ring-1 ring-inset ring-white/50">
                     <RiContrast2Line
                       className="size-5 text-gray-900"
@@ -440,14 +447,6 @@ export default function Features() {
               </div>
               <div className="absolute bottom-[6rem] right-[6rem] z-20">
                 <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 shadow-md shadow-black/10 ring-1 ring-black/10">
-                  <div className="absolute left-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute right-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute bottom-[15%] left-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute bottom-[15%] right-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute right-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute left-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute left-1/2 top-[2%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute bottom-[2%] left-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
                   <div className="w-fit rounded-full bg-gradient-to-b from-white to-gray-100 p-3 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.05),0_7px_10px_0_rgba(0,0,0,0.10)] ring-1 ring-inset ring-white/50">
                     <RiCodepenLine
                       className="size-5 text-gray-900"
@@ -458,14 +457,6 @@ export default function Features() {
               </div>
               <div className="absolute bottom-[6rem] left-[6rem] z-20">
                 <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 shadow-md shadow-black/10 ring-1 ring-black/10">
-                  <div className="absolute left-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute right-[15%] top-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute bottom-[15%] left-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute bottom-[15%] right-[15%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute right-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute left-[2%] top-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute left-1/2 top-[2%] size-0.5 rounded-full bg-gray-100 shadow-inner" />
-                  <div className="absolute bottom-[2%] left-1/2 size-0.5 rounded-full bg-gray-100 shadow-inner" />
                   <div className="w-fit rounded-full bg-gradient-to-b from-white to-gray-100 p-3 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.05),0_7px_10px_0_rgba(0,0,0,0.10)] ring-1 ring-inset ring-white/50">
                     <RiCopilotFill
                       className="size-5 text-gray-900"
