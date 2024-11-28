@@ -1,4 +1,3 @@
-import { cx } from "@/lib/utils"
 import {
   RiCarFill,
   RiCheckLine,
@@ -309,72 +308,61 @@ export default function Features() {
           </p>
         </div>
         <div className="relative col-span-2 flex items-center justify-center overflow-hidden">
-          <svg
-            className="absolute size-full"
-            // style={{
-            //   maskImage:
-            //     "linear-gradient(transparent, white 20rem, white calc(100% - 20rem), transparent)",
-            // }}
+      <svg className="absolute size-full">
+        <defs>
+          <pattern
+            id="diagonal-feature-pattern"
+            patternUnits="userSpaceOnUse"
+            width="64"
+            height="64"
           >
-            <defs>
-              <pattern
-                id="diagonal-feature-pattern"
-                patternUnits="userSpaceOnUse"
-                width="64"
-                height="64"
-              >
-                {Array.from({ length: 17 }, (_, i) => {
-                  const offset = i * 8
-                  return (
-                    <path
-                      key={i}
-                      d={`M${-106 + offset} 110L${22 + offset} -18`}
-                      className="stroke-gray-200/70"
-                      strokeWidth="1"
-                    />
-                  )
-                })}
-              </pattern>
-            </defs>
-            <rect
-              width="100%"
-              height="100%"
-              fill="url(#diagonal-feature-pattern)"
-            />
-          </svg>
-          <div className="relative h-[440px] w-[440px]">
-            <div className="grid h-[440px] w-[440px] grid-cols-9 [mask-image:radial-gradient(white_0%,transparent_60%)]">
-              {Array(81)
-                .fill(null)
-                .map((_, index) => {
-                  const isLastRow = index >= 72
-                  const isLastCol = (index + 1) % 9 === 0
-                  const isCenter = index === 40
-
-                  return (
-                    <div
-                      key={index}
-                      className={cx(
-                        "h-12 w-12 border-l border-t border-gray-300",
-                        isLastRow ? "border-b" : "",
-                        isLastCol ? "border-r" : "",
-                      )}
-                    >
-                      {isCenter && (
-                        <div className="relative flex size-12 items-center justify-center">
-                          <div>
-                            <div className="relative z-10 flex h-12 w-12 items-center justify-center bg-white shadow-[inset_0px_-5px_10px_rgba(0,0,0,0.1),0_7px_10px_0_rgba(0,0,0,0.15)] ring-1 ring-black/15">
-                              <SolarMark className="size-8" />
-                            </div>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  )
-                })}
-            </div>
-          </div>
+            {Array.from({ length: 17 }, (_, i) => {
+              const offset = i * 8;
+              return (
+                <path
+                  key={i}
+                  d={`M${-106 + offset} 110L${22 + offset} -18`}
+                  className="stroke-gray-200/70"
+                  strokeWidth="1"
+                />
+              );
+            })}
+          </pattern>
+        </defs>
+        <rect
+          width="100%"
+          height="100%"
+          fill="url(#diagonal-feature-pattern)"
+        />
+      </svg>
+      <div className="relative h-[432px] w-[432px] mask-image:radial-gradient(white_0%,transparent_60%)]">
+        <svg
+          id="grid"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          className="absolute size-[432px] mask"
+        >
+          <path
+            className="stroke-gray-300"
+            d="M48 0v432M96 0v432M144 0v432M192 0v432M240 0v432M288 0v432M336 0v432M384 0v432M0 48h432M0 96h432M0 144h432M0 192h432M0 240h432M0 288h432M0 336h432M0 384h432"
+          />
+        </svg>
+        
+        <div className="relative h-full select-none pointer-events-none">
+      <div className="absolute top-[192px] left-[191.5px]">
+        <div className="flex h-12 w-12 items-center justify-center bg-white shadow ring-1 ring-black/15">
+          <SolarMark className="h-8 w-8" />
         </div>
+      </div>
+
+      
+
+
+      
+    </div>
+    
+      </div>
+    </div>
         <div className="col-span-2 my-auto px-2">
           <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
             Easy Expansion
