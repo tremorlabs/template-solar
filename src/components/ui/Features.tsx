@@ -4,7 +4,7 @@ import {
   RiCircleLine,
   RiCodepenLine,
   RiContrast2Line,
-  RiCopilotFill,
+  RiFullscreenFill,
   RiLoaderFill,
   RiNotification2Line,
   RiPlaneFill,
@@ -172,7 +172,7 @@ export default function Features() {
               fill="url(#diagonal-feature-pattern)"
             />
           </svg>
-          <div className="pointer-events-none h-96 select-none p-10">
+          <div className="pointer-events-none h-[26rem] select-none p-10">
             <div className="relative flex flex-col items-center justify-center">
               <Orbit
                 durationSeconds={40}
@@ -308,61 +308,120 @@ export default function Features() {
           </p>
         </div>
         <div className="relative col-span-2 flex items-center justify-center overflow-hidden">
-      <svg className="absolute size-full">
-        <defs>
-          <pattern
-            id="diagonal-feature-pattern"
-            patternUnits="userSpaceOnUse"
-            width="64"
-            height="64"
-          >
-            {Array.from({ length: 17 }, (_, i) => {
-              const offset = i * 8;
-              return (
-                <path
-                  key={i}
-                  d={`M${-106 + offset} 110L${22 + offset} -18`}
-                  className="stroke-gray-200/70"
-                  strokeWidth="1"
-                />
-              );
-            })}
-          </pattern>
-        </defs>
-        <rect
-          width="100%"
-          height="100%"
-          fill="url(#diagonal-feature-pattern)"
-        />
-      </svg>
-      <div className="relative h-[432px] w-[432px] mask-image:radial-gradient(white_0%,transparent_60%)]">
-        <svg
-          id="grid"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          className="absolute size-[432px] mask"
-        >
-          <path
-            className="stroke-gray-300"
-            d="M48 0v432M96 0v432M144 0v432M192 0v432M240 0v432M288 0v432M336 0v432M384 0v432M0 48h432M0 96h432M0 144h432M0 192h432M0 240h432M0 288h432M0 336h432M0 384h432"
-          />
-        </svg>
-        
-        <div className="relative h-full select-none pointer-events-none">
-      <div className="absolute top-[192px] left-[191.5px]">
-        <div className="flex h-12 w-12 items-center justify-center bg-white shadow ring-1 ring-black/15">
-          <SolarMark className="h-8 w-8" />
+          <svg className="absolute size-full">
+            <defs>
+              <pattern
+                id="diagonal-feature-pattern"
+                patternUnits="userSpaceOnUse"
+                width="64"
+                height="64"
+              >
+                {Array.from({ length: 17 }, (_, i) => {
+                  const offset = i * 8
+                  return (
+                    <path
+                      key={i}
+                      d={`M${-106 + offset} 110L${22 + offset} -18`}
+                      className="stroke-gray-200/70"
+                      strokeWidth="1"
+                    />
+                  )
+                })}
+              </pattern>
+            </defs>
+            <rect
+              width="100%"
+              height="100%"
+              fill="url(#diagonal-feature-pattern)"
+            />
+          </svg>
+          <div className="mask-image:radial-gradient(white_0%,transparent_60%)] relative h-[432px] w-[432px]">
+            <svg
+              id="grid"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              className="mask absolute size-[432px]"
+            >
+              <path
+                className="stroke-gray-300"
+                d="M48 0v432M96 0v432M144 0v432M192 0v432M240 0v432M288 0v432M336 0v432M384 0v432M0 48h432M0 96h432M0 144h432M0 192h432M0 240h432M0 288h432M0 336h432M0 384h432"
+              />
+            </svg>
+
+            <div className="pointer-events-none relative h-full select-none">
+              <div className="absolute left-[191.8px] top-[192px]">
+                <div className="flex h-12 w-12 items-center justify-center bg-white shadow ring-1 ring-black/15">
+                  <SolarMark className="h-8 w-8" />
+                </div>
+              </div>
+              <div className="absolute left-[48px] top-[144px]">
+                <div className="relative">
+                  <div className="absolute inset-0 size-12 animate-pulse bg-orange-200 blur-[3px]"></div>
+                  <div className="relative flex h-12 w-12 items-center justify-center bg-white shadow ring-1 ring-black/15">
+                    <span className="text-sm font-medium text-gray-500">
+                      14°C
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute left-[144px] top-[48px]">
+                <div className="relative">
+                  <div className="absolute inset-0 size-12 animate-pulse bg-orange-200 blur-[3px]"></div>
+                  <div className="relative flex h-12 w-12 items-center justify-center bg-white shadow ring-1 ring-black/15">
+                    <span className="text-sm font-medium text-gray-500">
+                      18°C
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute left-[240px] top-[96px]">
+                <div className="relative">
+                  <div className="absolute inset-0 size-12 animate-pulse bg-orange-200 blur-[3px]"></div>
+                  <div className="relative flex h-12 w-12 items-center justify-center bg-white shadow ring-1 ring-black/15">
+                    <span className="text-sm font-medium text-gray-500">
+                      17°C
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute left-[385px] top-[240px]">
+                <div className="relative">
+                  <div className="absolute inset-0 size-12 animate-pulse bg-orange-200 blur-[3px]"></div>
+                  <div className="relative flex h-12 w-12 items-center justify-center bg-white shadow ring-1 ring-black/15">
+                    <span className="text-sm font-medium text-gray-500">
+                      14°C
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute left-[336px] top-[337px]">
+                <div className="relative">
+                  <div className="absolute inset-0 size-12 animate-pulse bg-orange-200 blur-[3px]"></div>
+                  <div className="relative flex h-12 w-12 items-center justify-center bg-white shadow ring-1 ring-black/15">
+                    <span className="text-sm font-medium text-gray-500">
+                      12°C
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute left-[144px] top-[288px]">
+                <div className="relative">
+                  <div className="absolute inset-0 size-12 animate-pulse bg-orange-200 blur-[3px]"></div>
+                  <div className="relative flex h-12 w-12 items-center justify-center bg-white shadow ring-1 ring-black/15">
+                    <span className="text-sm font-medium text-gray-500">
+                      17°C
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      
-
-
-      
-    </div>
-    
-      </div>
-    </div>
         <div className="col-span-2 my-auto px-2">
           <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
             Easy Expansion
@@ -411,7 +470,7 @@ export default function Features() {
               fill="url(#diagonal-feature-pattern)"
             />
           </svg>
-          <div className="pointer-events-none relative flex size-full h-96 select-none items-center justify-center p-10">
+          <div className="pointer-events-none relative flex size-full h-[26rem] select-none items-center justify-center p-10">
             <div className="relative">
               <div className="absolute left-[6rem] top-[6rem] z-20">
                 <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 shadow-md shadow-black/10 ring-1 ring-black/10">
@@ -446,7 +505,7 @@ export default function Features() {
               <div className="absolute bottom-[6rem] left-[6rem] z-20">
                 <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 shadow-md shadow-black/10 ring-1 ring-black/10">
                   <div className="w-fit rounded-full bg-gradient-to-b from-white to-gray-100 p-3 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.05),0_7px_10px_0_rgba(0,0,0,0.10)] ring-1 ring-inset ring-white/50">
-                    <RiCopilotFill
+                    <RiFullscreenFill
                       className="size-5 text-gray-900"
                       aria-hidden="true"
                     />
