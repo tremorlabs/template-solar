@@ -42,7 +42,7 @@ export default function Testimonial() {
               src="/images/smiller.jpeg"
               width={56}
               height={56}
-              className="rounded border object-contain"
+              className="rounded-sm border object-contain"
             />
           </div>
           <div>
