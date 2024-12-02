@@ -15,3 +15,4 @@ export const SolarMark = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
+

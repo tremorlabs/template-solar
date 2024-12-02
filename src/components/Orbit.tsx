@@ -21,12 +21,10 @@ export const Orbit = ({
   durationSeconds = 8,
   keepUpright = false,
 }: OrbitingObjectProps) => {
-  // Calculate derived dimensions
   const orbitDiameter = radiusPx * 2
   const containerSize = orbitDiameter + defaultObjectSize
   const initialOffset = radiusPx + defaultObjectSize / 2
 
-  // Position the orbiting objects with even spacing
   const positionedObjects = orbitingObjects.map((object, index) => {
     const delaySeconds = -(index * (durationSeconds / orbitingObjects.length))
 
