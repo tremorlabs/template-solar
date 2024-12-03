@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 import { SolarMark } from "../../../public/SolarMark"
 
 const ChipViz = () => {
@@ -29,7 +29,7 @@ const ChipViz = () => {
     <div className="relative flex items-center">
       <div className="relative">
         <motion.div
-          variants={createVariants({ scale: 1.10, delay: 0 })}
+          variants={createVariants({ scale: 1.1, delay: 0 })}
           initial="initial"
           animate="animate"
           className="absolute -inset-px z-0 rounded-full bg-linear-to-r from-yellow-500 via-amber-500 to-orange-500 opacity-30 blur-xl"
