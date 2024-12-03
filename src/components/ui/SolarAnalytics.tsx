@@ -23,31 +23,25 @@ export function SolarAnalytics() {
       <div className="*:pointer-events-none">
         <AnalyticsIllustration />
       </div>
-      <Divider></Divider>
+      <Divider className="mt-0"></Divider>
       <div className="grid grid-cols-1 grid-rows-2 gap-6 md:grid-cols-4 md:grid-rows-1">
         <StickerCard
-          Icon={
-            <RiNavigationFill className="mb-2 size-6 shrink-0 text-orange-400" />
-          }
+          Icon={RiNavigationFill}
           title="Autonomous Navigation"
           description="Smart tractors that navigate fields independently using GPS."
         />
         <StickerCard
-          Icon={
-            <RiRobot3Fill className="mb-2 size-6 shrink-0 text-orange-400" />
-          }
+          Icon={RiRobot3Fill}
           title="Robotic Harvesting"
           description="AI-powered robots that identify and harvest crops at optimal ripeness."
         />
         <StickerCard
-          Icon={<RiDropFill className="mb-2 size-6 shrink-0 text-orange-400" />}
+          Icon={RiDropFill}
           title="Smart Irrigation"
           description="Automated irrigation systems that optimize water usage."
         />
         <StickerCard
-          Icon={
-            <RiPieChartFill className="mb-2 size-6 shrink-0 text-orange-400" />
-          }
+          Icon={RiPieChartFill}
           title="Yield Analytics"
           description="Advanced analytics platform that predicts crop yields."
         />

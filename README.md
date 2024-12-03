@@ -1,6 +1,6 @@
-# Tremor – Raster
+# Tremor – Solar
 
-`Raster` is a website template from [Tremor](https://tremor.so). It's built
+`Solar` is a website template from [Tremor](https://tremor.so). It's built
 using [`Tremor`](https://tremor.so/docs/getting-started/installation) and
 [Next.js](https://nextjs.org).
 
