@@ -3,14 +3,14 @@
 import { siteConfig } from "@/app/siteConfig"
 import useScroll from "@/lib/useScroll"
 import { cx } from "@/lib/utils"
+import { RiCloseFill, RiMenuFill } from "@remixicon/react"
 import Link from "next/link"
 import React from "react"
 import { SolarLogo } from "../../../public/SolarLogo"
-import { SolarMark } from "../../../public/SolarMark"
 import { Button } from "../Button"
 
 export function NavBar() {
-  const [open, setOpen] = React.useState(true)
+  const [open, setOpen] = React.useState(false)
   const scrolled = useScroll(15)
 
   return (
@@ -26,8 +26,7 @@ export function NavBar() {
         <div className="relative flex items-center justify-between">
           <Link href={siteConfig.baseLinks.home} aria-label="Home">
             <span className="sr-only">Solar Tech Logo</span>
-            <SolarLogo className="hidden w-24 md:block" />
-            <SolarMark className="w-9 md:hidden" />
+            <SolarLogo className="w-22" />
           </Link>
           <nav className="hidden sm:block md:absolute md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 md:transform">
             <div className="flex items-center gap-10 font-medium">
@@ -51,14 +50,25 @@ export function NavBar() {
           <Button
             onClick={() => setOpen(!open)}
             variant="secondary"
-            className="h-10 font-semibold sm:hidden"
+            className="p-1.5 sm:hidden"
+            aria-label={open ? "CloseNavigation Menu" : "Open Navigation Menu"}
           >
-            Open
+            {!open ? (
+              <RiMenuFill
+                className="size-6 shrink-0 text-gray-900"
+                aria-hidden
+              />
+            ) : (
+              <RiCloseFill
+                className="size-6 shrink-0 text-gray-900"
+                aria-hidden
+              />
+            )}
           </Button>
         </div>
         <nav
           className={cx(
-            "my-6 flex text-lg ease-in-out will-change-transform sm:hidden",
+            "mt-6 flex flex-col gap-6 text-lg ease-in-out will-change-transform sm:hidden",
             open ? "" : "hidden",
           )}
         >
@@ -73,6 +83,9 @@ export function NavBar() {
               <Link href={siteConfig.baseLinks.home}>Changelog</Link>
             </li>
           </ul>
+          <Button variant="secondary" className="text-lg">
+            Get a quote
+          </Button>
         </nav>
       </div>
     </header>
