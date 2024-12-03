@@ -17,7 +17,11 @@ import ChipViz from "./ChipViz"
 
 export default function Features() {
   return (
-    <div className="relative mx-auto max-w-6xl">
+    <section
+      aria-label="Solar Technologies Features for Farms"
+      id="solutions"
+      className="relative mx-auto max-w-6xl scroll-my-24"
+    >
       {/* Vertical Lines */}
       <div className="pointer-events-none inset-0 select-none">
         {/* Left */}
@@ -539,6 +543,6 @@ export default function Features() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

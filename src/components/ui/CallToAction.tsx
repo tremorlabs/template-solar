@@ -4,10 +4,13 @@ import { Button } from "../Button"
 
 export function CallToAction() {
   return (
-    <div className="container mx-auto">
+    <section aria-labelledby="cta-title" className="mx-auto max-w-6xl">
       <div className="grid items-center gap-8 sm:grid-cols-6">
         <div className="sm:col-span-2">
-          <h2 className="text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">
+          <h2
+            id="cta-title"
+            className="text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl"
+          >
             Ready to get started?
           </h2>
           <p className="mt-3 mb-8 text-lg text-gray-600">
@@ -41,7 +44,7 @@ export function CallToAction() {
           />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

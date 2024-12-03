@@ -9,7 +9,11 @@ import { SVGMap } from "./SVGMap"
 
 export const Map = () => {
   return (
-    <div className="relative flex w-full max-w-6xl flex-col items-center justify-center overflow-hidden rounded-2xl bg-gray-950 px-10 shadow-2xl shadow-black/50 sm:px-16 md:px-28 lg:mx-auto">
+    <section
+      id="farm-management"
+      aria-labelledby="management-title"
+      className="relative flex w-full max-w-6xl scroll-my-24 flex-col items-center justify-center overflow-hidden rounded-2xl bg-gray-950 px-10 shadow-2xl shadow-black/50 sm:px-16 md:px-28 lg:mx-auto"
+    >
       <div className="absolute left-0 z-10 h-full backdrop-blur-[2px]">
         <svg
           className="h-full w-8 border-r border-zinc-900 stroke-zinc-800 sm:w-20"
@@ -84,21 +88,24 @@ export const Map = () => {
       <div className="pt-12 text-base font-semibold tracking-tight text-orange-400 sm:pt-20 sm:text-lg">
         Farm Management
       </div>
-      <h2 className="mt-6 max-w-[700px] text-balance text-center text-2xl font-semibold tracking-tight text-white md:text-5xl">
+      <h2
+        id="management-title"
+        className="mt-6 max-w-[700px] text-center text-2xl font-semibold tracking-tight text-balance text-white md:text-5xl"
+      >
         Monitoring & Control for Precision Agriculture
       </h2>
-      <p className="mt-4 max-w-2xl text-balance text-center text-base text-gray-400 sm:mt-8 sm:text-xl">
+      <p className="mt-4 max-w-2xl text-center text-base text-balance text-gray-400 sm:mt-8 sm:text-xl">
         Complete oversight of your farming operations across fields, irrigation
         systems, and aerial monitoring, delivering insights even in remote rural
         locations.
       </p>
 
-      <div className="relative mb-10 ml-[17rem] mt-20 scale-90 sm:mb-16 md:ml-0 md:mt-24 md:scale-100">
+      <div className="relative mt-20 mb-10 ml-[17rem] scale-90 sm:mb-16 md:mt-24 md:ml-0 md:scale-100">
         <SVGMap className="w-[50rem] shrink-0" />
         <div className="absolute -top-3 left-[130px]">
           <div className="relative flex items-center justify-center">
             <div className="absolute size-10 rounded-full bg-gray-950 ring-1 ring-white/15"></div>
-            <div className="absolute -right-[3.7rem] -top-4 flex w-fit items-center justify-center whitespace-nowrap rounded-full bg-gray-950 px-1.5 py-0.5 text-xs text-white ring-1 ring-white/15">
+            <div className="absolute -top-4 -right-[3.7rem] flex w-fit items-center justify-center rounded-full bg-gray-950 px-1.5 py-0.5 text-xs whitespace-nowrap text-white ring-1 ring-white/15">
               Scanning
             </div>
             <RiPlaneLine className="relative size-5 rotate-90 text-white" />
@@ -110,10 +117,10 @@ export const Map = () => {
             ></div>
           </div>
         </div>
-        <div className="absolute left-[243px] top-[73px]">
+        <div className="absolute top-[73px] left-[243px]">
           <div className="relative flex items-center justify-center">
             <div className="absolute size-10 rounded-full bg-gray-950 ring-1 ring-white/15"></div>
-            <div className="absolute -right-[3.7rem] -top-4 flex w-fit items-center justify-center whitespace-nowrap rounded-full bg-gray-950 px-1.5 py-0.5 text-xs text-white ring-1 ring-white/15">
+            <div className="absolute -top-4 -right-[3.7rem] flex w-fit items-center justify-center rounded-full bg-gray-950 px-1.5 py-0.5 text-xs whitespace-nowrap text-white ring-1 ring-white/15">
               Irrigating
             </div>
             <Icons.QuadCopter className="relative size-5 rotate-90 text-white" />
@@ -125,10 +132,10 @@ export const Map = () => {
             ></div>
           </div>
         </div>
-        <div className="absolute right-[300px] top-32">
+        <div className="absolute top-32 right-[300px]">
           <div className="relative flex items-center justify-center">
             <div className="absolute size-10 rounded-full bg-gray-950 ring-1 ring-white/15"></div>
-            <div className="absolute -right-[3.7rem] -top-4 flex w-fit items-center justify-center whitespace-nowrap rounded-full bg-gray-950 px-1.5 py-0.5 text-xs text-white ring-1 ring-white/15">
+            <div className="absolute -top-4 -right-[3.7rem] flex w-fit items-center justify-center rounded-full bg-gray-950 px-1.5 py-0.5 text-xs whitespace-nowrap text-white ring-1 ring-white/15">
               Scanning
             </div>
             <RiPlaneLine className="relative size-5 rotate-90 text-white" />
@@ -140,28 +147,28 @@ export const Map = () => {
             ></div>
           </div>
         </div>
-        <div className="absolute right-[390px] top-20">
+        <div className="absolute top-20 right-[390px]">
           <div className="relative flex items-center justify-center">
             <div className="absolute size-10 rounded-full bg-gray-950 ring-1 ring-white/15"></div>
             <RiHome9Fill className="relative size-5 text-white" />
           </div>
         </div>
-        <div className="absolute right-[430px] top-12">
+        <div className="absolute top-12 right-[430px]">
           <div className="relative flex items-center justify-center">
             <div className="absolute size-10 rounded-full bg-gray-950 ring-1 ring-white/15"></div>
-            <div className="absolute -right-7 -top-4 flex w-fit items-center justify-center whitespace-nowrap rounded-full bg-gray-950 px-1.5 py-0.5 text-xs text-white ring-1 ring-white/15">
+            <div className="absolute -top-4 -right-7 flex w-fit items-center justify-center rounded-full bg-gray-950 px-1.5 py-0.5 text-xs whitespace-nowrap text-white ring-1 ring-white/15">
               Idle
             </div>
             <RiTruckFill className="relative size-5 text-white" />
           </div>
         </div>
-        <div className="absolute right-56 top-9">
+        <div className="absolute top-9 right-56">
           <div className="relative flex items-center justify-center">
             <RiSignalTowerFill className="z-10 size-5 text-white" />
             <div className="absolute size-10 rounded-full bg-gray-950 ring-1 ring-white/15 backdrop-blur-sm"></div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }

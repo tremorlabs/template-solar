@@ -27,7 +27,7 @@ export default function Home() {
       <div className="mt-12 mb-40 px-2 xl:px-0">
         <SolarAnalytics />
       </div>
-      <div className="mx-auto mt-10 mb-40 max-w-6xl px-2 xl:px-0">
+      <div className="mt-10 mb-40 px-2 xl:px-0">
         <CallToAction />
       </div>
     </main>
