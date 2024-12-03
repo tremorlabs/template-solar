@@ -1,3 +1,4 @@
+import { CallToAction } from "@/components/ui/CallToAction"
 import FeatureDivider from "@/components/ui/FeatureDivider"
 import Features from "@/components/ui/Features"
 import { Hero } from "@/components/ui/Hero"
@@ -25,6 +26,9 @@ export default function Home() {
       <FeatureDivider className="my-16 max-w-6xl" />
       <div className="mt-12 mb-40 px-2 xl:px-0">
         <SolarAnalytics />
+      </div>
+      <div className="mx-auto mt-10 mb-40 max-w-6xl px-2 xl:px-0">
+        <CallToAction />
       </div>
     </main>
   )
