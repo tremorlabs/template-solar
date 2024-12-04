@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Solar Technologies",
   url: "https://solar.tremor.so",
-  description: "The database for modern applications.",
+  description: "Automation for every Farm.",
   baseLinks: {
     home: "/",
   },
