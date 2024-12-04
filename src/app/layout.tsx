@@ -4,6 +4,7 @@ import "./globals.css"
 
 import Footer from "@/components/ui/Footer"
 import { NavBar } from "@/components/ui/Navbar"
+import { RiArrowRightLine } from "@remixicon/react"
 import { siteConfig } from "./siteConfig"
 
 export const metadata: Metadata = {
@@ -37,6 +38,23 @@ export const metadata: Metadata = {
   },
 }
 
+function Banner() {
+  return (
+    <div className="fixed bottom-10 left-1/2 z-50 -translate-x-1/2 transition">
+      <div className="flex items-center gap-x-1 rounded-full bg-gray-950 p-1 text-sm ring-1 shadow-xl shadow-black/20 ring-white/10">
+        <a
+          className="group flex items-center gap-0.5 rounded-[20px] bg-gradient-to-b from-white to-gray-200 px-4 py-2 font-semibold whitespace-nowrap text-gray-900 ring-1 ring-indigo-400/30 transition ring-inset"
+          href="https://blocks.tremor.so/templates#template-solar"
+          target="_blank"
+        >
+          Get this template
+          <RiArrowRightLine className="ml-1 size-[18px] shrink-0" />
+        </a>
+      </div>
+    </div>
+  )
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -50,6 +68,7 @@ export default function RootLayout({
         <NavBar />
         {children}
         <Footer />
+        <Banner />
       </body>
     </html>
   )
