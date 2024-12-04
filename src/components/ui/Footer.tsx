@@ -60,8 +60,11 @@ const Footer = () => {
   }
 
   return (
-    <div className="px-2 xl:px-0">
-      <footer className="relative mx-auto flex max-w-6xl flex-wrap pt-4">
+    <div className="px-4 xl:px-0">
+      <footer
+        id="footer"
+        className="relative mx-auto flex max-w-6xl flex-wrap pt-4"
+      >
         {/* Vertical Lines */}
         <div className="pointer-events-none inset-0">
           {/* Left */}
