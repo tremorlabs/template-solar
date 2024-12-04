@@ -9,7 +9,7 @@ export function CallToAction() {
         <div className="sm:col-span-2">
           <h2
             id="cta-title"
-            className="scroll-my-24 text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl"
+            className="scroll-my-60 text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl"
           >
             Ready to get started?
           </h2>
