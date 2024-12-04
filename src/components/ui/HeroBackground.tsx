@@ -98,7 +98,7 @@ const GameOfLife = () => {
   }, [])
 
   return (
-    <div className="mask pointer-events-none select-none overflow-hidden">
+    <div className="mask pointer-events-none overflow-hidden select-none">
       <canvas ref={canvasRef} width={1500} height={600} />
     </div>
   )

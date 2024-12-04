@@ -141,7 +141,7 @@ const Footer = () => {
         <div className="mr-auto flex w-full justify-between lg:w-fit lg:flex-col">
           <Link
             href="/"
-            className="flex select-none items-center font-medium text-gray-700 sm:text-sm"
+            className="flex items-center font-medium text-gray-700 select-none sm:text-sm"
           >
             <SolarLogo className="ml-2 w-20" />
 

@@ -10,9 +10,15 @@ import { StickerCard } from "./StickerCard"
 
 export function SolarAnalytics() {
   return (
-    <section className="relative mx-auto w-full max-w-6xl overflow-hidden">
+    <section
+      aria-labelledby="solar-analytics"
+      className="relative mx-auto w-full max-w-6xl overflow-hidden"
+    >
       <div>
-        <h2 className="relative text-lg font-semibold tracking-tight text-orange-500">
+        <h2
+          id="solar-analytics"
+          className="relative scroll-my-24 text-lg font-semibold tracking-tight text-orange-500"
+        >
           Solar Analytics
           <div className="absolute top-1 -left-[8px] h-5 w-[3px] rounded-r-sm bg-orange-500" />
         </h2>
