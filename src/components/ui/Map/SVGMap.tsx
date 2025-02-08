@@ -681,11 +681,17 @@ export const SVGMap = (props: SVGProps<SVGSVGElement>) => {
           //     y1: [height * 0.9, height * 0.5],
           //     y2: [height * 1.1, height * 0.7],
           //   }}
+          initial={{
+            x1: width * 1.2,
+            x2: width * 1.35,
+            y1: height * 0.5,
+            y2: height * 0.7
+          }}
           animate={{
-            x1: [width * 1.2, -width * 0.4],
-            x2: [width * 1.35, -width * 0.25],
-            y1: [height * 0.5, height * 0.9],
-            y2: [height * 0.7, height * 1.1],
+            x1: -width * 0.4,
+            x2: -width * 0.25,
+            y1: height * 0.9,
+            y2: height * 1.1,
           }}
           transition={{
             duration: 3.5,
@@ -699,11 +705,17 @@ export const SVGMap = (props: SVGProps<SVGSVGElement>) => {
           <GradientColors />
         </motion.linearGradient>
         <motion.linearGradient
+          initial={{
+            x1: 0,
+            x2: 0,
+            y1: -height * 0.2,
+            y2: 0
+          }}
           animate={{
-            x1: [0, 0],
-            x2: [0, 0],
-            y1: [-height * 0.2, height * 1.2],
-            y2: [0, height * 1.4],
+            x1: 0,
+            x2: 0,
+            y1: height * 1.2,
+            y2: height * 1.4,
           }}
           transition={{
             duration: 3,
