@@ -13,7 +13,7 @@
     "@remixicon/react": "^4.6.0",
     "clsx": "^2.1.1",
     "geist": "^1.5.1",
-    "motion": "12.0.1",
+    "motion": "12.23.22",
     "next": "15.1.6",
     "react": "19.0.0",
     "react-dom": "19.0.0",
