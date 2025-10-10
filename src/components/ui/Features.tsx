@@ -26,7 +26,7 @@ export default function Features() {
       <div className="pointer-events-none inset-0 select-none">
         {/* Left */}
         <div
-          className="absolute inset-y-0 my-[-5rem] w-px"
+          className="absolute inset-y-0 -my-20 w-px"
           style={{
             maskImage:
               "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
@@ -47,7 +47,7 @@ export default function Features() {
 
         {/* Right */}
         <div
-          className="absolute inset-y-0 right-0 my-[-5rem] w-px"
+          className="absolute inset-y-0 right-0 -my-20 w-px"
           style={{
             maskImage:
               "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
@@ -67,7 +67,7 @@ export default function Features() {
         </div>
         {/* Middle */}
         <div
-          className="absolute inset-y-0 left-1/2 -z-10 my-[-5rem] w-px"
+          className="absolute inset-y-0 left-1/2 -z-10 -my-20 w-px"
           style={{
             maskImage:
               "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
@@ -87,7 +87,7 @@ export default function Features() {
         </div>
         {/* 25% */}
         <div
-          className="absolute inset-y-0 left-1/4 -z-10 my-[-5rem] hidden w-px sm:block"
+          className="absolute inset-y-0 left-1/4 -z-10 -my-20 hidden w-px sm:block"
           style={{
             maskImage:
               "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
@@ -107,7 +107,7 @@ export default function Features() {
         </div>
         {/* 75% */}
         <div
-          className="absolute inset-y-0 left-3/4 -z-10 my-[-5rem] hidden w-px sm:block"
+          className="absolute inset-y-0 left-3/4 -z-10 -my-20 hidden w-px sm:block"
           style={{
             maskImage:
               "linear-gradient(transparent, white 5rem, white calc(100% - 5rem), transparent)",
@@ -144,7 +144,7 @@ export default function Features() {
         </div>
         <div className="relative col-span-2 flex items-center justify-center overflow-hidden">
           <svg
-            className="absolute size-full [mask-image:linear-gradient(transparent,white_10rem)]"
+            className="absolute size-full mask-[linear-gradient(transparent,white_10rem)]"
             // style={{
             //   maskImage:
             //     "linear-gradient(transparent, white 20rem, white calc(100% - 20rem), transparent)",
@@ -176,7 +176,7 @@ export default function Features() {
               fill="url(#diagonal-feature-pattern)"
             />
           </svg>
-          <div className="pointer-events-none h-[26rem] p-10 select-none">
+          <div className="pointer-events-none h-104 p-10 select-none">
             <div className="relative flex flex-col items-center justify-center">
               <Orbit
                 durationSeconds={40}
@@ -442,7 +442,7 @@ export default function Features() {
         </div>
         <div className="relative col-span-2 flex items-center justify-center overflow-hidden">
           <svg
-            className="absolute size-full [mask-image:linear-gradient(white_10rem,transparent)]"
+            className="absolute size-full mask-[linear-gradient(white_10rem,transparent)]"
             // style={{
             //   maskImage:
             //     "linear-gradient(transparent, white 20rem, white calc(100% - 20rem), transparent)",
@@ -474,9 +474,9 @@ export default function Features() {
               fill="url(#diagonal-feature-pattern)"
             />
           </svg>
-          <div className="pointer-events-none relative flex size-full h-[26rem] items-center justify-center p-10 select-none">
+          <div className="pointer-events-none relative flex size-full h-104 items-center justify-center p-10 select-none">
             <div className="relative">
-              <div className="absolute top-[6rem] left-[6rem] z-20">
+              <div className="absolute top-24 left-24 z-20">
                 <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 ring-1 shadow-md shadow-black/10 ring-black/10">
                   <div className="w-fit rounded-full bg-linear-to-b from-white to-gray-100 p-3 ring-1 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.09),0_3px_5px_0_rgba(0,0,0,0.19)] ring-white/50 ring-inset">
                     <RiNotification2Line
@@ -486,7 +486,7 @@ export default function Features() {
                   </div>
                 </div>
               </div>
-              <div className="absolute top-[6rem] right-[6rem] z-20">
+              <div className="absolute top-24 right-24 z-20">
                 <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 ring-1 shadow-md shadow-black/10 ring-black/10">
                   <div className="w-fit rounded-full bg-linear-to-b from-white to-gray-100 p-3 ring-1 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.05),0_7px_10px_0_rgba(0,0,0,0.10)] ring-white/50 ring-inset">
                     <RiContrast2Line
@@ -496,7 +496,7 @@ export default function Features() {
                   </div>
                 </div>
               </div>
-              <div className="absolute right-[6rem] bottom-[6rem] z-20">
+              <div className="absolute right-24 bottom-24 z-20">
                 <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 ring-1 shadow-md shadow-black/10 ring-black/10">
                   <div className="w-fit rounded-full bg-linear-to-b from-white to-gray-100 p-3 ring-1 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.05),0_7px_10px_0_rgba(0,0,0,0.10)] ring-white/50 ring-inset">
                     <RiCodepenLine
@@ -506,7 +506,7 @@ export default function Features() {
                   </div>
                 </div>
               </div>
-              <div className="absolute bottom-[6rem] left-[6rem] z-20">
+              <div className="absolute bottom-24 left-24 z-20">
                 <div className="relative mx-auto w-fit rounded-full bg-gray-50 p-1 ring-1 shadow-md shadow-black/10 ring-black/10">
                   <div className="w-fit rounded-full bg-linear-to-b from-white to-gray-100 p-3 ring-1 shadow-[inset_0px_-2px_6px_rgba(0,0,0,0.05),0_7px_10px_0_rgba(0,0,0,0.10)] ring-white/50 ring-inset">
                     <RiFullscreenFill

@@ -100,8 +100,8 @@ export const Map = () => {
         locations.
       </p>
 
-      <div className="relative mt-20 mb-10 ml-[17rem] scale-90 sm:mb-16 md:mt-24 md:ml-0 md:scale-100">
-        <SVGMap className="w-[50rem] shrink-0" />
+      <div className="relative mt-20 mb-10 ml-68 scale-90 sm:mb-16 md:mt-24 md:ml-0 md:scale-100">
+        <SVGMap className="w-200 shrink-0" />
         <div className="absolute -top-3 left-[130px]">
           <div className="relative flex items-center justify-center">
             <div className="absolute size-10 rounded-full bg-gray-950 ring-1 ring-white/15"></div>

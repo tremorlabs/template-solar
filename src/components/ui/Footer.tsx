@@ -69,7 +69,7 @@ const Footer = () => {
         <div className="pointer-events-none inset-0">
           {/* Left */}
           <div
-            className="absolute inset-y-0 my-[-5rem] w-px"
+            className="absolute inset-y-0 -my-20 w-px"
             style={{
               maskImage: "linear-gradient(transparent, white 5rem)",
             }}
@@ -89,7 +89,7 @@ const Footer = () => {
 
           {/* Right */}
           <div
-            className="absolute inset-y-0 right-0 my-[-5rem] w-px"
+            className="absolute inset-y-0 right-0 -my-20 w-px"
             style={{
               maskImage: "linear-gradient(transparent, white 5rem)",
             }}

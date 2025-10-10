@@ -1,5 +1,4 @@
 "use client"
-
 import { motion } from "motion/react"
 
 const container = {
@@ -10,7 +9,7 @@ const container = {
       delayChildren: 0.2,
     },
   },
-}
+} as const
 
 const item = {
   hidden: {
@@ -30,7 +29,7 @@ const item = {
       mass: 1.2,
     },
   },
-}
+} as const
 
 function FadeContainer({
   children,
@@ -61,6 +60,7 @@ function FadeDiv({
     </motion.div>
   )
 }
+
 function FadeSpan({
   children,
   className,

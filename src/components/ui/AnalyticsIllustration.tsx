@@ -47,7 +47,7 @@ const summary = [
 
 export default function FieldPerformance() {
   return (
-    <div className="h-150 shrink-0 overflow-hidden [mask-image:radial-gradient(white_30%,transparent_90%)] perspective-[4000px] perspective-origin-center">
+    <div className="h-150 shrink-0 overflow-hidden mask-[radial-gradient(white_30%,transparent_90%)] perspective-[4000px] perspective-origin-center">
       <div className="-translate-y-10 -translate-z-10 rotate-x-10 rotate-y-20 -rotate-z-10 transform-3d">
         <h3 className="text-sm text-gray-500">Field Yield Performance</h3>
         <p className="mt-1 text-3xl font-semibold text-gray-900">
